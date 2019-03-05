@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import CitiesContainer from '../containers/CitiesContainer'
-import CityListContainer from '../containers/CityListContainer'
-import MainCityContainer from '../containers/MainCityContainer'
+import SFCityContainer from '../containers/SFCityContainer'
 class AllPosts extends Component {
   render() {
     return (
       <div>
       <CitiesContainer/>
-      <CityListContainer/>
-      <MainCityContainer/>
+      <SFCityContainer/>
       </div>
     );
   }

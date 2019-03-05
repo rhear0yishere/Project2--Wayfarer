@@ -6,7 +6,7 @@ class User extends Component {
   render() {
     return (
       <div>
-      <h1>I'm on the User Profile Page</h1>
+      <h1 className= "userTitle">User Profile Page</h1>
       <ProfileInfo/>
       <UserPostContainer/>
       </div>

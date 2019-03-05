@@ -1,15 +1,13 @@
 import React, { Component } from 'react';
 
-
-
-class CityListContainer extends Component {
+class SFCityInfo extends Component {
   render() {
     return (
       <div>
-          <h1>Each City</h1>
+          <h1>San Francisco</h1>
       </div>
     );
   }
 }
 
-export default CityListContainer;
+export default SFCityInfo;

@@ -6,12 +6,13 @@ import CitiesList from '../components/CitiesList'
 class CitiesContainer extends Component {
   render() {
     let list = []
-    for (var i=0; i<3; i++){
+    for (var i=0; i<4; i++){
       list.push(<CitiesList/>)
     }
     return (
-      <div>
-          {list}
+      <div className= "citiesList">
+        <h1>List of Cities</h1>
+         <CitiesList/>
       </div>
     );
   }

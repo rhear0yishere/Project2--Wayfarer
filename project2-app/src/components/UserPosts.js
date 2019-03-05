@@ -7,6 +7,7 @@ class UserPosts extends Component {
       <div>
           <h2>User Post Title</h2>
           <p>User Post paragraph</p>
+          <button>View More</button>
       </div>
     );
   }

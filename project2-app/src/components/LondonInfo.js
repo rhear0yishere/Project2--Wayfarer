@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 
-class MainCityInfo extends Component {
+class LondonInfo extends Component {
   render() {
     return (
       <div>
-          <h1>MainCityInfo</h1>
+          <h1>London</h1>
       </div>
     );
   }
 }
 
-export default MainCityInfo;
+export default LondonInfo;
