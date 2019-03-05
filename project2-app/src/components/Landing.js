@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-
+import HeaderContainer from '../containers/HeaderContainer';
+import About from './About';
 class Landing extends Component {
   render() {
     return (
-      <h1>I'm on the Landing</h1>
+      <div>
+        <HeaderContainer/>
+        <About/>
+      </div>
     );
   }
 }
