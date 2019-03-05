@@ -1,9 +1,15 @@
 import React, { Component } from 'react';
-
+import CitiesContainer from '../containers/CitiesContainer'
+import CityListContainer from '../containers/CityListContainer'
+import MainCityContainer from '../containers/MainCityContainer'
 class AllPosts extends Component {
   render() {
     return (
-      <h1>I'm on the AllPosts</h1>
+      <div>
+      <CitiesContainer/>
+      <CityListContainer/>
+      <MainCityContainer/>
+      </div>
     );
   }
 }
