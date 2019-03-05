@@ -4,6 +4,27 @@ import Nav from './components/Nav'
 
 
 class App extends Component {
+  
+  state = {
+    email: '' ,
+    password: '',
+    LoggedIn: false,
+    user: null
+  }
+
+  componentDidMount () {
+    if (localStorage.token) {
+      this.setState({
+        LoggedIn: true
+      })
+    } else {
+      this.setState({
+        LoggedIn:false
+      })
+    }
+  }
+
+
   render() {
     return (
       <div >
