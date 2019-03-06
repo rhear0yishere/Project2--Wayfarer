@@ -37,3 +37,15 @@ code {
   margin-left: 400px;
   
 }
+
+.postText{
+  padding-right: 500px;
+  padding-bottom: 500px;
+}
+
+.postForm{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left:100px;
+}

@@ -45,6 +45,7 @@ changeSanFran= () => {
   <div>
 
     <div className= "citiesList">
+    <h1>Cities</h1>
         <ul>
           <button className={"button"} onClick={this.changeSeattle}>Seattle</button>
           <button className={"button"} onClick={this.changeLondon}>London</button>
@@ -57,7 +58,7 @@ changeSanFran= () => {
 
       <div className ="mainCity">
           <SFCityInfo title ={this.state.title} description= {this.state.description} imagePath={this.state.imagePath}/>
-          <PostContainer/>
+          <PostContainer title ={this.state.title}/>
       </div>
 
 
