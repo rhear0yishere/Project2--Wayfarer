@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import TopicsContainer from '../containers/TopicsContainer'
-
+import About from './About';
+import CityCarousel from './Carousel/Carousel'
 class Landing extends Component {
   render() {
     return (
-      <div > 
-        <h1 className="landingTitle">I'm on the Landing</h1>
-        <TopicsContainer/>
+      <div>
+        <CityCarousel/>
+        <About/>
       </div>
     );
   }

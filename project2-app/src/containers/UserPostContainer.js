@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import UserPosts from '../components/UserPosts'
-import axios from 'axios'
+// import axios from 'axios';
 
 
 

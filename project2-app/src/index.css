@@ -38,6 +38,37 @@ code {
   
 }
 
+.about h1 {
+  text-align:center;
+  margin-bottom: 1em;
+  
+}
+.about {
+  margin: 100px 20px;
+}
+
+.nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+}
+.nav-container {
+  background-color:red;
+}
+Menu.props.name {
+  font-size:20px;
+}
+
+.Signup {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.Login {
+  margin: 0 auto;
+  width:50%;
+
+
 .postText{
   padding-right: 500px;
   padding-bottom: 500px;
@@ -48,4 +79,5 @@ code {
   flex-direction: column;
   width: 50%;
   margin-left:100px;
+
 }

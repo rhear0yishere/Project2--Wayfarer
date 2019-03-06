@@ -1,26 +1,28 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Button, Checkbox, Form } from 'semantic-ui-react'
+// import {Form, Button} from 'react-bootstrap';
 
 
 class LoginPage extends Component {
   render () {
     return (
-      <div>
-        <h2>Log In</h2>
-
-        <form>
-          <div>
-            <label htmlFor='email'>Email</label>
-            <input type='text' name='email'  />
-          </div>
-          <div>
-            <label htmlFor='password'>Password</label>
-            <input type='text' name='password'  />
-          </div>
-          <input value='Submit' type='submit' />
-        </form>
-      </div>
-    )
+    
+      <Form className='Login'>
+      <Form.Field>
+        <label>Username</label>
+        <input placeholder='Username' />
+      </Form.Field>
+      <Form.Field>
+        <label>Password</label>
+        <input placeholder='Password' />
+      </Form.Field>
+      <Form.Field>
+        <Checkbox label='I agree to the Terms and Conditions' />
+      </Form.Field>
+      <Button type='submit'>Sign In</Button>
+    </Form>
+      )
+    }
   }
-}
-
-export default LoginPage
+      export default LoginPage
+      
