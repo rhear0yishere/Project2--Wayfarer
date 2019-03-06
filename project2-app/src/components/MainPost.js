@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class MainPost extends Component {
   render() {
     
-    let list = ['Seattle', 'Seattle', 'SF']
+    let list = ['Seattle', 'Seattle', 'San Francisco']
     for (var i=0; i<=list.length;i++){
       if (list[i]===this.props.title){
         console.log(list[i])
