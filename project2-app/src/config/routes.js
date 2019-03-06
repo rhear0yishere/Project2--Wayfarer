@@ -7,7 +7,7 @@ import LoginPage from '../components/LoginPage'
 import SignupPage from '../components/SignupPage'
 import SFCityContainer from '../containers/SFCityContainer';
 import LondonContainer from '../containers/LondonContainer';
-
+import SignupModal from '../components/SignupModal';
 
 export default (
     <Switch>
@@ -18,6 +18,7 @@ export default (
       <Route path='/Signup' component={ SignupPage } />
       <Route path='/SF' component={ SFCityContainer } />
       <Route path='/london' component={ LondonContainer } />
+      <Route path='/SignUP' component={SignupModal} />
 
 
 

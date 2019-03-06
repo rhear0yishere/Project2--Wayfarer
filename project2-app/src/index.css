@@ -37,3 +37,33 @@ code {
   margin-left: 400px;
   
 }
+.about h1 {
+  text-align:center;
+  margin-bottom: 1em;
+  
+}
+.about {
+  margin: 100px 20px;
+}
+
+.nav {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  
+}
+.nav-container {
+  background-color:red;
+}
+Menu.props.name {
+  font-size:20px;
+}
+
+.Signup {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.Login {
+  margin: 0 auto;
+  width:50%;
+}

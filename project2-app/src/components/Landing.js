@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import HeaderContainer from '../containers/HeaderContainer';
 import About from './About';
+import CityCarousel from './Carousel/Carousel'
 class Landing extends Component {
   render() {
     return (
       <div>
-        <HeaderContainer/>
+        <CityCarousel/>
         <About/>
       </div>
     );
