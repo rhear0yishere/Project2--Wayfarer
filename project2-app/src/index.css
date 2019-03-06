@@ -12,3 +12,28 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.landingTitle, .userTitle, .userInfoForm{
+  text-align: center;
+}
+
+.topicParagraph{
+  display: flex;
+  display: inline-block;
+  margin-top:100px;
+  margin-left: 250px;
+  
+}
+
+.citiesList{
+  border: 1px solid black;
+  width: 20%;
+  
+}
+
+.mainCity{
+  width:40%;
+  border: 1px solid black;
+  margin-left: 400px;
+  
+}
