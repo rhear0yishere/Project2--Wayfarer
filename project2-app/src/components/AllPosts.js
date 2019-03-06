@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-
+import CitiesContainer from '../containers/CitiesContainer'
+import SFCityContainer from '../containers/SFCityContainer'
 class AllPosts extends Component {
   render() {
     return (
-      <h1>I'm on the AllPosts</h1>
+      <div>
+      <CitiesContainer/>
+      <SFCityContainer/>
+      </div>
     );
   }
 }
