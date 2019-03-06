@@ -1,18 +1,23 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+// import React, { Component } from 'react';
+
+
+// class CitiesList extends Component {
 
 
 
-class CitiesList extends Component {
-  render() {
-    return (
-      <div>
-          <li><Link to={'/sf'}>San Francisco</Link></li>
-          <li><Link to={'/london'}>London</Link></li>
-          <li><Link to={'/seattle'}>Seattle</Link></li>
-      </div>
-    );
-  }
-}
+//   render() {
+//     return (
+//       <div className= "citiesList">
+//         <ul>
 
-export default CitiesList;
+//           <button>San Fran</button>
+//           <button>Seattle</button>
+//           <button>London</button>
+
+//         </ul>
+//       </div>
+//     );
+//   }
+// }
+
+// export default CitiesList;

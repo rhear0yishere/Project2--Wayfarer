@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
-import CitiesContainer from '../containers/CitiesContainer'
 import SFCityContainer from '../containers/SFCityContainer'
+import { Link } from 'react-router-dom';
+
 class AllPosts extends Component {
   render() {
     return (
       <div>
-      <CitiesContainer/>
-      <SFCityContainer/>
+      <li><Link to={'/NewPost'}>New Post</Link></li>
+      <SFCityContainer />
       </div>
     );
   }

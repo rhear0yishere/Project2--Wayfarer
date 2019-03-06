@@ -9,6 +9,10 @@ import SFCityContainer from '../containers/SFCityContainer';
 import LondonContainer from '../containers/LondonContainer';
 import SignupModal from '../components/SignupModal';
 
+import NewPost from '../components/NewPost'
+
+
+
 export default (
     <Switch>
       <Route exact path='/' component={ Landing } />
@@ -19,6 +23,9 @@ export default (
       <Route path='/SF' component={ SFCityContainer } />
       <Route path='/london' component={ LondonContainer } />
       <Route path='/SignUP' component={SignupModal} />
+      <Route path='/NewPost' component={ NewPost } />
+
+
 
 
 
