@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Checkbox, Form } from 'semantic-ui-react'
+// import { Button, Checkbox, Form } from 'semantic-ui-react'
 // import {Form, Button,} from 'react-bootstrap';
 
 
@@ -8,7 +8,7 @@ class SignUpPage extends Component {
     return (
       
 
-<Form className='Signup'>
+{/* <Form className='Signup'>
           <Form.Field>
             <label>First Name</label>
             <input placeholder='First Name' />
@@ -33,7 +33,7 @@ class SignUpPage extends Component {
             <Checkbox label='I agree to the Terms and Conditions' />
           </Form.Field>
           <Button type='submit'>Create My Account</Button>
-        </Form>
+        </Form> */}
 
       //////////////
     //   <Form>

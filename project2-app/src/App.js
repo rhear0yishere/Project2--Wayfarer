@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import MyRoutes from './config/routes';
-import 'semantic-ui-css/semantic.min.css';
+// import 'semantic-ui-css/semantic.min.css';
 import Nav from './components/Nav';
 
 class App extends Component {
