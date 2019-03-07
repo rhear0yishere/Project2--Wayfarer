@@ -2,21 +2,41 @@ import React, { Component } from 'react';
 
 class NewPost extends Component {
   state = {
-    message: '',
-    title: ''
+    message: ''
+   
+  
   };
 
+  onInputChangeMesssage = (event) => {
+    this.setState({
+      message: event.target.value
+    })
+  }
+
+  onInputChangeTitle = (event) => {
+    this.setState({
+      title: event.target.value
+    })
+  }
 
   onFormSubmit = (event) => {
     event.preventDefault();
+    let message= this.state.message;
+    this.props.createTip(message)
+    this.setState({
+      message: ''
+    });
   }
 
+
+
   render() {
+
     return (
       <div>
         <form className="postForm"  onSubmit={ this.onFormSubmit }>
         <select name="Cities">
-            <option value="None">Pick City</option>
+            <option value= "None">Pick City</option>
             <option value="Seattle">Seattle</option>
             <option value="San Francisco">San Francisco</option>
             <option value="London">London</option>
@@ -24,7 +44,7 @@ class NewPost extends Component {
         <input
          className= "postTitle"
          value={ this.state.title }
-         onChange={ this.onInputChange }
+         onChange={ this.onInputChangeTitle }
          placeholder="Post Title"
          type="text"
 
@@ -32,13 +52,13 @@ class NewPost extends Component {
           <textarea 
             className= "postText"
             value={ this.state.message }
-            onChange={ this.onInputChange }
+            onChange={ this.onInputChangeMesssage }
             placeholder="Post message"
             type="text"
           />
           <button 
             type="submit"  
-            className="btn">Submit Post</button>
+            className="btn" onClick= {this.onFormSubmit}>Submit Post </button>
         </form>
       </div>
     );

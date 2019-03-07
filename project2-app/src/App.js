@@ -103,7 +103,7 @@ logOut = () => {
        <Route path='/login'
               render={(props) => {
                 return (
-                  <LoginPage isLoggedIn={this.state.LoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} />
+                  <LoginPage LoggedIn={this.state.LoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} />
                 )
               }}
             />
