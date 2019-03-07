@@ -6,7 +6,8 @@ import { Button, Checkbox, Form } from 'semantic-ui-react'
 class SignUpPage extends Component {
   render () {
     return (
-      
+  <div>
+    <h1>Signup</h1>
    <Form className='Signup'>
            <Form.Field>
             <label>Email</label>
@@ -21,9 +22,12 @@ class SignUpPage extends Component {
            <input value='Create Account' type ='submit' onClick={this.props.signUp}/>
          </Form> 
 
-      
+         </div>
    
     )}
 }
 
 export default SignUpPage
+
+
+

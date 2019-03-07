@@ -59,8 +59,6 @@ logOut = () => {
   localStorage.clear()
 }
 
-
-
   render() {
     return (
       <div >
