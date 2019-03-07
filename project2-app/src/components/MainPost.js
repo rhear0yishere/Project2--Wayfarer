@@ -4,15 +4,16 @@ class MainPost extends Component {
   render() {
     
     return (
-      <li data-todos-index={ this.props.tips._id }>
+      <li data-todos-index={ this.props.tip._id }>
         <div>
+          
           <span>{ this.props.tip.text }</span>
-          {/* <a 
+          <a 
             href="#removeTodo"
             className='remove'
-            onClick={ this.deleteClickedTodo }>
+            >
             Remove
-          </a> */}
+          </a>
         </div>
       </li>
     );

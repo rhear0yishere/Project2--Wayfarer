@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import TipModel from '../models/tips'
 import TipList from '../components/TipList'
 import NewPost from '../components/NewPost'
+import { Link } from 'react-router-dom';
 
 class PostContainer extends Component {
 
@@ -51,10 +52,15 @@ class PostContainer extends Component {
 
 
     return (
-      <div>
-          <p>{this.props.title}</p>
+      <div className="PostContainer">
+                 <NewPost createTip = {this.createTip}/>
 
-          <NewPost createTip = {this.createTip}/>
+          <p>{this.props.title}</p>
+          {/* <li><Link to={'/NewPost'}>New Post</Link></li> */}
+
+
+
+
           <TipList 
             tips= {this.state.tips}
             deleteTip= {this.deleteTip} 

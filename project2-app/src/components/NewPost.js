@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import TipModel from '../models/tips';
 
 class NewPost extends Component {
   state = {
@@ -34,6 +35,7 @@ class NewPost extends Component {
 
     return (
       <div>
+        <label>New Post</label>
         <form className="postForm"  onSubmit={ this.onFormSubmit }>
         <select name="Cities">
             <option value= "None">Pick City</option>

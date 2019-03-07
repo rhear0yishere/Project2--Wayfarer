@@ -3,22 +3,22 @@ import MainPost from '../components/MainPost'
 
 class TipList extends Component {
   render() {
-    // let tips = this.props.tips.map ((tip) => {
+    let tips = this.props.tips.map ((tip) => {
     return (
       <div>
-          {/* <MainPost 
-          key = {tips._id}
-          tip = {tip}
-          deleteTip ={this.props.deleteTip}
-          /> */}
+          <MainPost 
+            key = {tip._id}
+            tip = {tip}
+            deleteTip ={this.props.deleteTip}
+          />
 
       </div>
     )
-    // })
+    })
 
     return (
       <ul>
-        {/* {tips} */}
+        {tips}
       </ul>
     )
   }
