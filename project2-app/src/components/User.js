@@ -3,6 +3,15 @@ import ProfileInfo from './ProfileInfo'
 import UserPostContainer from '../containers/UserPostContainer'
 
 class User extends Component {
+
+  state = {
+    userInfo: []
+  }
+
+  // componentDidMount () {
+  //   axios.get('http://localhost:3002/api/)
+  // }
+
   render() {
     return (
       <div>

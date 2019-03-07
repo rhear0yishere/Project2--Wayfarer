@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import MyRoutes from './config/routes';
 import 'semantic-ui-css/semantic.min.css';
 import Nav from './components/Nav';
+
 import LoginPage from './components/LoginPage';
 import { Switch, Route } from 'react-router-dom';
 import axios from 'axios';
+
+import SignupPage from './components/SignupPage'
+
 
 class App extends Component {
   
@@ -28,14 +32,19 @@ class App extends Component {
     }
   }
 
-  handleInput = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value
+
+
+
+  takeInput = (e) => {
+    this.setState ({
+      [e.target.name] : e.target.value
     })
   }
-  handleSignUp = (e) => {
+
+  signUp = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3001/user/signup', 
+    axios.post('http://localhost:3002/user/signup', 
+
 			{ email: this.state.email,
       	password: this.state.password }
 			)
@@ -43,11 +52,24 @@ class App extends Component {
         console.log(response)
         localStorage.token = response.data.signedJwt
           this.setState({
-            isLoggedIn: true
+            LoggedIn: true,
+            user: response.data.user
+
           })
       })
       .catch(err => console.log(err))
   }
+
+
+
+logOut = () => {
+  this.setState({
+    email: '',
+    password: '',
+    LoggedIn: false
+  })
+  localStorage.clear()
+}
 
 
   handleLogIn = (e) => {
@@ -68,16 +90,25 @@ class App extends Component {
     return (
       <div >
            <Nav/>
-           <switch>
-           <Route path='/login'
+
+         { MyRoutes }  
+         <Switch>
+           <Route path = '/signup' 
+           render = {(props) => {
+             return(
+              <SignupPage LoggedIn={this.state.LoggedIn} takeInput={this.takeInput} signUp={this.signUp} /> )
+
+           }}
+           />
+       <Route path='/login'
               render={(props) => {
                 return (
                   <LoginPage isLoggedIn={this.state.LoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} />
                 )
               }}
             />
-            </switch>
-         { MyRoutes }     
+         </Switch>
+
           <footer/>   
 
       </div>

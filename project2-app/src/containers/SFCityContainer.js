@@ -50,8 +50,7 @@ changeSanFran= () => {
           <button className={"button"} onClick={this.changeSeattle}>Seattle</button>
           <button className={"button"} onClick={this.changeLondon}>London</button>
           <button className={"button"} onClick={this.changeSanFran}>San Francisco</button>
-
-
+          
         </ul>
       </div>
 

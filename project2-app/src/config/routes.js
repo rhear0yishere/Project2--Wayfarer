@@ -6,7 +6,6 @@ import AllPosts from '../components/AllPosts'
 import LoginPage from '../components/LoginPage'
 import SignupPage from '../components/SignupPage'
 import SFCityContainer from '../containers/SFCityContainer';
-import SignupModal from '../components/SignupModal';
 
 import NewPost from '../components/NewPost'
 
@@ -18,13 +17,9 @@ export default (
       <Route path='/User' component={ User } />
       <Route path='/AllPosts' component={ AllPosts } />
       <Route path='/Login' component={ LoginPage } />
-      <Route path='/Signup' component={ SignupPage } />
+      {/* <Route path='/Signup' component={ SignupPage } /> */}
       <Route path='/SF' component={ SFCityContainer } />
-      <Route path='/SignUP' component={SignupModal} />
       <Route path='/NewPost' component={ NewPost } />
-
-
-
 
 
     </Switch>

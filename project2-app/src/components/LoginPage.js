@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { Button, Checkbox, Form } from 'semantic-ui-react'
-// import {Form, Button} from 'react-bootstrap';
 
 
 class LoginPage extends Component {
   render () {
     return (
+  <div>
+      <h1>Login</h1>
     
       <Form className='Login'>
       <Form.Field>
@@ -21,7 +22,10 @@ class LoginPage extends Component {
       </Form.Field>
       <Button type='submit' onClick={this.props.handleLogIn}>Sign In</Button>
     </Form>
-      )
+    </div>
+    )
+    
+      
     }
   }
       export default LoginPage
