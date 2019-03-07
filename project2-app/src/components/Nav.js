@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import { Menu, Segment } from 'semantic-ui-react'
+import { Menu, Segment } from 'semantic-ui-react'
 
 
 
@@ -33,7 +33,7 @@ import { Link } from 'react-router-dom';
 
     return (
       <div className='nav-container'>
-        {/* <Menu className='nav'>
+         <Menu className='nav'>
           <Menu.Item as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
           
           <Menu.Menu position='right'>
@@ -62,7 +62,7 @@ import { Link } from 'react-router-dom';
             />
             
           </Menu.Menu>
-        </Menu> */}
+        </Menu> 
       </div>
     )
   }

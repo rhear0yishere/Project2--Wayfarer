@@ -1,54 +1,29 @@
 import React, { Component } from 'react';
-// import { Button, Checkbox, Form } from 'semantic-ui-react'
-// import {Form, Button,} from 'react-bootstrap';
+import { Button, Checkbox, Form } from 'semantic-ui-react'
+// import { Button,} from 'react-bootstrap';
 
 
 class SignUpPage extends Component {
   render () {
     return (
       
-
-{/* <Form className='Signup'>
-          <Form.Field>
-            <label>First Name</label>
-            <input placeholder='First Name' />
-          </Form.Field>
-          <Form.Field>
-            <label>Last Name</label>
-            <input placeholder='Last Name' />
-          </Form.Field>
-          <Form.Field>
-            <label>Username</label>
-            <input placeholder='Username' />
-          </Form.Field>
-          <Form.Field>
+   <Form className='Signup'>
+           <Form.Field>
             <label>Email</label>
-            <input placeholder='Email' />
-          </Form.Field>
-          <Form.Field>
-            <label>Password</label>
-            <input placeholder='Password' />
-          </Form.Field>
-          <Form.Field>
-            <Checkbox label='I agree to the Terms and Conditions' />
-          </Form.Field>
-          <Button type='submit'>Create My Account</Button>
-        </Form> */}
+             <input placeholder='Email' name= "email"onChange= {this.props.takeInput} />
+           </Form.Field>
+      
+           <Form.Field>
+             <label>Password</label>
+             <input placeholder='Password' name="password" onChange= {this.props.takeInput} />
+           </Form.Field>
 
-      //////////////
-    //   <Form>
-    //   <Form.Field>
-    //     <label>Username</label>
-    //     <input placeholder='First Name' />
-    //   </Form.Field>
-    //   <Form.Field>
-    //     <label>Email</label>
-    //     <input placeholder='Last Name' />
-    //   </Form.Field>
-    //   <Button type='submit'>Submit</Button>
-    // </Form>
-    )
-  }
+           <input value='Create Account' type ='submit' onClick={this.props.signUp}/>
+         </Form> 
+
+      
+   
+    )}
 }
 
 export default SignUpPage
