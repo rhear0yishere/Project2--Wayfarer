@@ -2,9 +2,13 @@ import React, { Component } from 'react';
 import MyRoutes from './config/routes';
 import 'semantic-ui-css/semantic.min.css';
 import Nav from './components/Nav';
-import SignupPage from './components/SignupPage'
-import axios from 'axios'
+
+import LoginPage from './components/LoginPage';
 import { Switch, Route } from 'react-router-dom';
+import axios from 'axios';
+
+import SignupPage from './components/SignupPage'
+
 
 class App extends Component {
   
@@ -15,6 +19,7 @@ class App extends Component {
     user: null
   }
 
+  
   componentDidMount () {
     if (localStorage.token) {
       this.setState({
@@ -27,6 +32,9 @@ class App extends Component {
     }
   }
 
+
+
+
   takeInput = (e) => {
     this.setState ({
       [e.target.name] : e.target.value
@@ -36,6 +44,7 @@ class App extends Component {
   signUp = (e) => {
     e.preventDefault()
     axios.post('http://localhost:3002/user/signup', 
+
 			{ email: this.state.email,
       	password: this.state.password }
 			)
@@ -45,10 +54,13 @@ class App extends Component {
           this.setState({
             LoggedIn: true,
             user: response.data.user
+
           })
       })
       .catch(err => console.log(err))
   }
+
+
 
 logOut = () => {
   this.setState({
@@ -59,10 +71,26 @@ logOut = () => {
   localStorage.clear()
 }
 
+
+  handleLogIn = (e) => {
+    e.preventDefault()
+    axios.post('http://localhost:3001/user/login', {
+      email: this.state.email,
+      password: this.state.password
+    })
+    .then( response => {
+      localStorage.token = response.data.signedJwt
+      this.setState({
+        isLoggedIn: true
+      })
+    })
+    .catch(err => console.log(err))
+  }
   render() {
     return (
       <div >
            <Nav/>
+
          { MyRoutes }  
          <Switch>
            <Route path = '/signup' 
@@ -72,9 +100,17 @@ logOut = () => {
 
            }}
            />
-      
+       <Route path='/login'
+              render={(props) => {
+                return (
+                  <LoginPage isLoggedIn={this.state.LoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} />
+                )
+              }}
+            />
          </Switch>
+
           <footer/>   
+
       </div>
     );
   }
