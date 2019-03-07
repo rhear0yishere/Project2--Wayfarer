@@ -10,16 +10,16 @@ class LoginPage extends Component {
       <Form className='Login'>
       <Form.Field>
         <label>Username</label>
-        <input placeholder='Username' />
+        <input placeholder='Username' onChange={this.props.handleInput} />
       </Form.Field>
       <Form.Field>
         <label>Password</label>
-        <input placeholder='Password' />
+        <input placeholder='Password' onChange={this.props.handleInput} />
       </Form.Field>
       <Form.Field>
         <Checkbox label='I agree to the Terms and Conditions' />
       </Form.Field>
-      <Button type='submit'>Sign In</Button>
+      <Button type='submit' onClick={this.props.handleLogIn}>Sign In</Button>
     </Form>
       )
     }

@@ -9,7 +9,7 @@ class SignUpPage extends Component {
       
 
 <Form className='Signup'>
-          <Form.Field>
+          {/* <Form.Field>
             <label>First Name</label>
             <input placeholder='First Name' />
           </Form.Field>
@@ -17,17 +17,17 @@ class SignUpPage extends Component {
             <label>Last Name</label>
             <input placeholder='Last Name' />
           </Form.Field>
-          <Form.Field>
-            <label>Username</label>
+          <Form.Field> */}
+            {/* <label>Username</label>
             <input placeholder='Username' />
-          </Form.Field>
+          </Form.Field> */}
           <Form.Field>
             <label>Email</label>
-            <input placeholder='Email' />
+            <input placeholder='Email' onChange={this.props.handleInput} />
           </Form.Field>
           <Form.Field>
             <label>Password</label>
-            <input placeholder='Password' />
+            <input placeholder='Password' onClick={this.props.handleSignUp} />
           </Form.Field>
           <Form.Field>
             <Checkbox label='I agree to the Terms and Conditions' />
