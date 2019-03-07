@@ -13,13 +13,15 @@ class TipModel {
         return request;
     }
 
-    static update (tipsId,updatePost) {
-        let request = axios.put (`${ endPoint }/${ tipsId }`, updatePost)
+    static update (tipId,updatePost) {
+        let tipData = updatePost;
+        let request = axios.put(`${ endPoint }/${JSON.stringify(tipData)}`);
         return request;
     }
 
-    static delete (tips) {
-        let request = axios.delete (`${ endPoint }/${ tips._id }`)
+    static delete (tip) {
+        let request = axios.delete(`${ endPoint }/${tip._id }`);
+        return request; 
     }
 
 }

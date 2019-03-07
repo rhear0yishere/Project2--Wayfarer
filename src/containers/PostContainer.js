@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import TipModel from '../models/tips'
 import TipList from '../components/TipList'
 import NewPost from '../components/NewPost'
-import { Link } from 'react-router-dom';
 
 class PostContainer extends Component {
 
@@ -19,19 +18,28 @@ class PostContainer extends Component {
       this.setState ({
         tips: res.data.tips
       })
-    });
+    }).catch((err)=> {
+     console.log(err, 'error!!!!!!!')
+    })
 
   }
 
-  deleteTip = (tip) => {
-    TipModel.delete (tip).then((res)=>{
+  deleteTip = (x) => {
+    TipModel.delete(x).then((res)=>{
       let tips = this.state.tips.filter(function(tip){
-        return tips._id != res.data._id
+
+        console.log(tip._id, 'tip object!!!!!!!!!!!!');
+
+        return tip._id != res.data._id
       });
+      console.log(res.data._id)
       this.setState({tips});
     })
   }
 
+
+
+  
   createTip = (x) => {
     let newPost = {
       text: x
@@ -44,6 +52,19 @@ class PostContainer extends Component {
     })
   }
 
+
+  updateTip = (tipId, tipText) => {
+    function updatingTip(tip) {
+      return tip._id === tipId;
+    }
+    TipModel.update(tipId, tipText).then((res) => {
+      // let tips = this.state.tips;
+      // tips.find(tip => updatingTip(tip)).body = tipText.text;
+      // this.setState({ tips });
+      // let data = JSON.parse(res.data);
+      console.dir(res);
+    })
+  }
 
 
   // tips._id === tipId
@@ -63,6 +84,7 @@ class PostContainer extends Component {
 
           <TipList 
             tips= {this.state.tips}
+            updateTip= {this.updateTip}
             deleteTip= {this.deleteTip} 
             />
           {/* <MainPost title= {this.props.title}/> */}

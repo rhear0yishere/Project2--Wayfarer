@@ -10,6 +10,7 @@ class TipList extends Component {
             key = {tip._id}
             tip = {tip}
             deleteTip ={this.props.deleteTip}
+            updateTip= {this.props.updateTip}
           />
 
       </div>
