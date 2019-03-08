@@ -19,13 +19,13 @@ class PostContainer extends Component {
         tips: res.data.tips
       })
     }).catch((err)=> {
-     console.log(err, 'error!!!!!!!')
+     console.log(err, 'error!!!!!!!');
     })
 
   }
 
-  deleteTip = (x) => {
-    TipModel.delete(x).then((res)=>{
+  deleteTip = (id) => {
+    TipModel.delete(id).then((res)=>{
       let tips = this.state.tips.filter(function(tip){
 
         console.log(tip._id, 'tip object!!!!!!!!!!!!');
@@ -62,7 +62,7 @@ class PostContainer extends Component {
       // tips.find(tip => updatingTip(tip)).body = tipText.text;
       // this.setState({ tips });
       // let data = JSON.parse(res.data);
-      console.dir(res);
+      console.log(res);
     })
   }
 

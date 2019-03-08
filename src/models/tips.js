@@ -24,6 +24,11 @@ class TipModel {
         return request; 
     }
 
+    static findCity (city) {
+        let request = axios.get(`${ endPoint }/${city }`);
+        return request;
+    }
+
 }
 
 export default TipModel;

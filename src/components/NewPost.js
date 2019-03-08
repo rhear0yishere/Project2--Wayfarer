@@ -3,7 +3,8 @@ import TipModel from '../models/tips';
 
 class NewPost extends Component {
   state = {
-    message: ''
+    message: '',
+    city: ''
    
   
   };
@@ -19,25 +20,31 @@ class NewPost extends Component {
       title: event.target.value
     })
   }
+  changeCity = (event) => {
+     this.setState({
+       city: event.target.value
+      });
 
+  }
+  
   onFormSubmit = (event) => {
     event.preventDefault();
+    console.log(event);
     let message= this.state.message;
     this.props.createTip(message)
     this.setState({
-      message: ''
+      message: '',
+      city: this.state.city
     });
   }
-
-
 
   render() {
 
     return (
       <div>
         <label>New Post</label>
-        <form className="postForm"  onSubmit={ this.onFormSubmit }>
-        <select name="Cities">
+        <form className="postForm"  onChange={ this.changeCity }>
+        <select name="Cities" >
             <option value= "None">Pick City</option>
             <option value="Seattle">Seattle</option>
             <option value="San Francisco">San Francisco</option>
@@ -60,7 +67,7 @@ class NewPost extends Component {
           />
           <button 
             type="submit"  
-            className="btn" onClick= {this.onFormSubmit}>Submit Post </button>
+            className="btn" onClick= {this.onFormSubmit} >Submit Post </button>
         </form>
       </div>
     );

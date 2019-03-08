@@ -3,16 +3,16 @@ import React, { Component } from 'react';
 class EditPost extends Component {
   state = {
     tip: {
-      _id: this.props.tip._id,
-      body: this.props.tip.text,
+      tipId: this.props.tip._id,
+      text: this.props.tip.text,
     }
   }
 
   onChange = (event) => {
     this.setState({
       tip: {
-        _id: this.props.tip._id,
-        body: event.target.value
+        tipId: this.props.tip._id,
+        text: event.target.value
       }
     });
   }
@@ -21,11 +21,11 @@ class EditPost extends Component {
     event.preventDefault();
     let tip = this.state.tip;
 
-    this.props.updateTodo(tip._id, tip);
+    this.props.updateTip(tip._id, tip);
     this.setState({ 
       tip: {
-        _id: this.props.tip._id,
-       body: ""
+        tipId: this.props.tip._id,
+       text: ""
       } 
     });
   }
@@ -39,7 +39,7 @@ class EditPost extends Component {
               type="text"
               onChange={ this.onChange }
               placeholder="update this tip here"
-              value={(this.state && this.state.tip.body) || ''} />
+              value={(this.state && this.state.tip.text) || ''} />
             <button type="submit">Save</button>
           </form>
         </div>
