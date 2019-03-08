@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const endPoint = `http://localhost:3002/api/tip`
+const endPoint = `http://localhost:3001/api/tip`
 
 class TipModel {
     static all(){
