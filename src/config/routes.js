@@ -18,10 +18,5 @@ export default (
       <Route path='/SF' component={ SFCityContainer } />
       {/* <Route path='/SignUP' component={SignupModal} /> */}
       <Route path='/NewPost' component={ NewPost } />
-
-
-
-
-
     </Switch>
   )
