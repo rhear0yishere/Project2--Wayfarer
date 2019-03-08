@@ -69,16 +69,20 @@ Menu.props.name {
   width:50%;
 }
 
-
+/* 
 .postText{
   padding-right: 500px;
   padding-bottom: 500px;
-}
+} */
 
 .postForm{
   display: flex;
   flex-direction: column;
-  width: 50%;
+  width: 40%;
   margin-left:100px;
 
+}
+
+.remove{
+  margin-left: 150px;
 }
