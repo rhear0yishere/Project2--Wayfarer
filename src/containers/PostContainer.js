@@ -6,7 +6,8 @@ import NewPost from '../components/NewPost'
 class PostContainer extends Component {
 
   state = {
-    tips: []
+    tips: [],
+    specific:[]
   };
 
 
