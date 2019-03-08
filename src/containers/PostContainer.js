@@ -1,14 +1,10 @@
 import React, { Component } from 'react';
-import TipModel from '../models/tips'
-import TipList from '../components/TipList'
-import NewPost from '../components/NewPost'
+import MainPost from '../components/MainPost'
 
 class PostContainer extends Component {
 
-  state = {
-    tips: []
-  };
 
+<<<<<<< HEAD
   componentDidMount() {
     this.fetchData();
   }
@@ -68,26 +64,20 @@ class PostContainer extends Component {
 
 
   // tips._id === tipId
+=======
+>>>>>>> 842edd21b22e817aa3c58ab2ad1aa5e9e148e135
 
   render() {
-
+    // let list = []
+    // for (var i=0; i<3; i++){
+    //   list.push( <MainPost/>)
+    // }
+  
 
     return (
-      <div className="PostContainer">
-                 <NewPost createTip = {this.createTip}/>
-
+      <div>
           <p>{this.props.title}</p>
-          {/* <li><Link to={'/NewPost'}>New Post</Link></li> */}
-
-
-
-
-          <TipList 
-            tips= {this.state.tips}
-            updateTip= {this.updateTip}
-            deleteTip= {this.deleteTip} 
-            />
-          {/* <MainPost title= {this.props.title}/> */}
+          <MainPost title= {this.props.title}/>
       </div>
     );
   }
