@@ -4,7 +4,6 @@ import MainPost from '../components/MainPost'
 class PostContainer extends Component {
 
 
-<<<<<<< HEAD
   componentDidMount() {
     this.fetchData();
   }
@@ -64,8 +63,6 @@ class PostContainer extends Component {
 
 
   // tips._id === tipId
-=======
->>>>>>> 842edd21b22e817aa3c58ab2ad1aa5e9e148e135
 
   render() {
     // let list = []
