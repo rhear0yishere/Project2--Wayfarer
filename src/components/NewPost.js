@@ -9,7 +9,6 @@ class NewPost extends Component {
 
   onFormSubmit = (event) => {
     event.preventDefault();
-<<<<<<< HEAD
     let message= this.state.message;
     this.props.createTip(message)
     this.setState({
@@ -17,8 +16,6 @@ class NewPost extends Component {
       city: this.state.city
     });
     console.log(this.state.city)
-=======
->>>>>>> e4cf6551ea746d9fd2d52a3d9798d0a8f5dccf34
   }
 
   render() {

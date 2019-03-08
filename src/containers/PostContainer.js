@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import MainPost from '../components/MainPost'
+import TipModel from '../models/tips'
 
 class PostContainer extends Component {
 
 
-<<<<<<< HEAD
   componentDidMount() {
     this.fetchData();
   }
@@ -61,8 +61,6 @@ class PostContainer extends Component {
 
 
   // tips._id === tipId
-=======
->>>>>>> e4cf6551ea746d9fd2d52a3d9798d0a8f5dccf34
 
   render() {
     // let list = []
