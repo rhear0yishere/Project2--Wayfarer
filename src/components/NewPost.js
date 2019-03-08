@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import TipModel from '../models/tips';
 
 class NewPost extends Component {
   state = {
@@ -30,26 +29,34 @@ class NewPost extends Component {
   onFormSubmit = (event) => {
     event.preventDefault();
     let message= this.state.message;
-    this.props.createTip(message)
+    let city= this.state.city
+    this.props.createTip(message,city)
     this.setState({
       message: '',
-      city: this.state.city
+      city: ''
     });
-    console.log(this.state.city)
   }
 
   render() {
 
     return (
-      <div>
-        <label>New Post</label>
-        <form className="postForm"  onChange={ this.changeCity }>
-        <select name="Cities" >
+      <div >
+        <form className="postForm" >
+        <input
+         className= "postCity"
+         value={ this.state.city}
+         onChange={ this.changeCity }
+         placeholder="City"
+         type="text"
+
+        />
+
+        {/* <select name="Cities" >
             <option value= "None">Pick City</option>
             <option value="Seattle">Seattle</option>
             <option value="San Francisco">San Francisco</option>
             <option value="London">London</option>
-        </select>
+        </select> */}
         <input
          className= "postTitle"
          value={ this.state.title }

@@ -9,6 +9,8 @@ class PostContainer extends Component {
     tips: []
   };
 
+
+  
   componentDidMount() {
     this.fetchData();
   }
@@ -28,21 +30,21 @@ class PostContainer extends Component {
     TipModel.delete(id).then((res)=>{
       let tips = this.state.tips.filter(function(tip){
 
-        console.log(tip._id, 'tip object!!!!!!!!!!!!');
-
+        console.log(tip.text, 'tip object!!!!!!!!!!!!');
+  
         return tip._id != res.data._id
       });
-      console.log(res.data._id)
+      
       this.setState({tips});
+      console.log(res.data._id)
     })
   }
 
 
-
-  
-  createTip = (x) => {
+  createTip = (message, city) => {
     let newPost = {
-      text: x
+      text: message,
+      city: city 
     }
 
     TipModel.create(newPost).then((res) => {
@@ -75,15 +77,13 @@ class PostContainer extends Component {
     return (
       <div className="PostContainer">
                  <NewPost createTip = {this.createTip}/>
-
+          <h1>Title</h1>
           <p>{this.props.title}</p>
           {/* <li><Link to={'/NewPost'}>New Post</Link></li> */}
 
-
-
-
           <TipList 
-            tips= {this.state.tips}
+            allTips= {this.state.tips}
+            tips= {this.props.tips}
             updateTip= {this.updateTip}
             deleteTip= {this.deleteTip} 
             />
@@ -94,3 +94,6 @@ class PostContainer extends Component {
 }
 
 export default PostContainer;
+
+
+

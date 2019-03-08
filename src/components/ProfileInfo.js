@@ -1,11 +1,12 @@
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
 
-class ProfileInfo extends Component {
-  render() {
-    return (
-      <h1 className= "userInfoForm">Rhea SF</h1>
-    );
-  }
-}
+// class ProfileInfo extends Component {
+//   render() {
 
-export default ProfileInfo;
+//     return (
+//       <h1>{this.props.email}</h1>
+//     );
+//   }
+// }
+
+// export default ProfileInfo;

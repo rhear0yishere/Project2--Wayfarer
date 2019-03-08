@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ProfileInfo from './ProfileInfo'
 import UserPostContainer from '../containers/UserPostContainer'
 
 class User extends Component {
@@ -13,10 +12,10 @@ class User extends Component {
   // }
 
   render() {
+    console.log(this.props.email, "THIS")
     return (
       <div>
-      <h1 className= "userTitle">User Profile Page</h1>
-      <ProfileInfo/>
+      <h1 className= "userTitle">Welcome  {this.props.email}</h1>
       <UserPostContainer/>
       </div>
     );
