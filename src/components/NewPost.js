@@ -1,34 +1,15 @@
 import React, { Component } from 'react';
-import TipModel from '../models/tips';
 
 class NewPost extends Component {
   state = {
     message: '',
-    city: ''
-   
-  
+    title: ''
   };
 
-  onInputChangeMesssage = (event) => {
-    this.setState({
-      message: event.target.value
-    })
-  }
 
-  onInputChangeTitle = (event) => {
-    this.setState({
-      title: event.target.value
-    })
-  }
-  changeCity = (event) => {
-     this.setState({
-       city: event.target.value
-      });
-
-  }
-  
   onFormSubmit = (event) => {
     event.preventDefault();
+<<<<<<< HEAD
     let message= this.state.message;
     this.props.createTip(message)
     this.setState({
@@ -36,16 +17,16 @@ class NewPost extends Component {
       city: this.state.city
     });
     console.log(this.state.city)
+=======
+>>>>>>> e4cf6551ea746d9fd2d52a3d9798d0a8f5dccf34
   }
 
   render() {
-
     return (
       <div>
-        <label>New Post</label>
-        <form className="postForm"  onChange={ this.changeCity }>
-        <select name="Cities" >
-            <option value= "None">Pick City</option>
+        <form className="postForm"  onSubmit={ this.onFormSubmit }>
+        <select name="Cities">
+            <option value="None">Pick City</option>
             <option value="Seattle">Seattle</option>
             <option value="San Francisco">San Francisco</option>
             <option value="London">London</option>
@@ -53,7 +34,7 @@ class NewPost extends Component {
         <input
          className= "postTitle"
          value={ this.state.title }
-         onChange={ this.onInputChangeTitle }
+         onChange={ this.onInputChange }
          placeholder="Post Title"
          type="text"
 
@@ -61,13 +42,13 @@ class NewPost extends Component {
           <textarea 
             className= "postText"
             value={ this.state.message }
-            onChange={ this.onInputChangeMesssage }
+            onChange={ this.onInputChange }
             placeholder="Post message"
             type="text"
           />
           <button 
             type="submit"  
-            className="btn" onClick= {this.onFormSubmit} >Submit Post </button>
+            className="btn">Submit Post</button>
         </form>
       </div>
     );
