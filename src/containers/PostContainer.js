@@ -19,7 +19,7 @@ class PostContainer extends Component {
         tips: res.data.tips
       })
     }).catch((err)=> {
-     console.log(err, 'error!!!!!!!');
+     console.log(err, 'error!!!!!!!')
     })
 
   }
@@ -37,6 +37,9 @@ class PostContainer extends Component {
     })
   }
 
+
+
+  
   createTip = (x) => {
     let newPost = {
       text: x
