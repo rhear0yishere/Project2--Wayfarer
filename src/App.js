@@ -45,7 +45,7 @@ class App extends Component {
 
   signUp = (e) => {
     e.preventDefault()
-    axios.post('http://still-journey-70148.herokuapp.com/', 
+    axios.post('https://still-journey-70148.herokuapp.com/', 
 
 			{ email: this.state.email,
       	password: this.state.password }
@@ -77,7 +77,7 @@ logOut = () => {
 
   handleLogIn = (e) => {
     e.preventDefault()
-    axios.post('http://still-journey-70148.herokuapp.com/', {
+    axios.post('https://still-journey-70148.herokuapp.com/', {
       email: this.state.email,
       password: this.state.password
     })
