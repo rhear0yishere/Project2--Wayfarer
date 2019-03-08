@@ -37,9 +37,6 @@ class PostContainer extends Component {
     })
   }
 
-
-
-  
   createTip = (x) => {
     let newPost = {
       text: x

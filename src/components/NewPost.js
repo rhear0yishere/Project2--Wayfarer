@@ -29,13 +29,13 @@ class NewPost extends Component {
   
   onFormSubmit = (event) => {
     event.preventDefault();
-    console.log(event);
     let message= this.state.message;
     this.props.createTip(message)
     this.setState({
       message: '',
       city: this.state.city
     });
+    console.log(this.state.city)
   }
 
   render() {
