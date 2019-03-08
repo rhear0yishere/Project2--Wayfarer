@@ -2,16 +2,19 @@ import React, { Component } from 'react';
 import MyRoutes from './config/routes';
 import 'semantic-ui-css/semantic.min.css';
 import Nav from './components/Nav';
-
+import Footer from './components/Footer'
 import LoginPage from './components/LoginPage';
 import { Switch, Route } from 'react-router-dom';
 import axios from 'axios';
+import {Redirect} from 'react-router-dom'
 
 import SignupPage from './components/SignupPage'
 
 
+
 class App extends Component {
-  
+ 
+ 
   state = {
     email: '' ,
     password: '',
@@ -43,7 +46,7 @@ class App extends Component {
 
   signUp = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3002/user/signup', 
+    axios.post('http://localhost:3001/user/signup', 
 
 			{ email: this.state.email,
       	password: this.state.password }
@@ -79,9 +82,10 @@ logOut = () => {
       password: this.state.password
     })
     .then( response => {
+      console.log(response.data);
       localStorage.token = response.data.signedJwt
       this.setState({
-        isLoggedIn: true
+        LoggedIn: true
       })
     })
     .catch(err => console.log(err))
@@ -89,27 +93,42 @@ logOut = () => {
   render() {
     return (
       <div >
-           <Nav/>
+           <Nav isLoggedIn={this.state.LoggedIn}
+           loggedOut={this.logOut}/>
 
          { MyRoutes }  
          <Switch>
            <Route path = '/signup' 
            render = {(props) => {
-             return(
-              <SignupPage LoggedIn={this.state.LoggedIn} takeInput={this.takeInput} signUp={this.signUp} /> )
-
-           }}
+             if(this.state.LoggedIn){
+               return <Redirect to="/user"/>
+             } else {
+              return(
+                <SignupPage {...props} LoggedIn={this.state.LoggedIn} takeInput={this.takeInput} signUp={this.signUp} /> )
+             }
+             }}
            />
-       <Route path='/login'
+          <Route path='/login' exact
+              render={(props) => {
+                if(this.state.LoggedIn){
+                  return <Redirect to="/user"/>
+                } else {
+                return (
+                  <LoginPage LoggedIn={this.state.LoggedIn} handleInput={this.takeInput} handleLogIn={this.handleLogIn} />
+                )
+                }
+              }}
+          />
+          <Route path='/profile' exact
               render={(props) => {
                 return (
-                  <LoginPage LoggedIn={this.state.LoggedIn} handleInput={this.handleInput} handleLogIn={this.handleLogIn} />
+                  <LoginPage LoggedIn={this.state.LoggedIn} handleInput={this.takeInput} handleLogIn={this.handleLogIn} />
                 )
               }}
-            />
+          />
          </Switch>
 
-          <footer/>   
+          <Footer/>   
 
       </div>
     );

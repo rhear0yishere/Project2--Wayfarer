@@ -4,6 +4,7 @@ import img1 from './images/japan.jpg'
 import img2 from './images/bigben.jpg'
 import img3 from './images/paris.jpg'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './Carousel.css';
 
 
 class CityCarousel extends Component {
@@ -32,15 +33,15 @@ class CityCarousel extends Component {
               direction={direction}
               onSelect={this.handleSelect}
             >
-            <Carousel.Item> <img className="d-block w-100" src={img1} alt="First slide" />
+            <Carousel.Item> <img className="pic d-block w-100" src={img1} alt="First slide" />
               <Carousel.Caption>
                 <div id="header">
-      
+                  <h1>Japan</h1>
                   </div>
               </Carousel.Caption>
             </Carousel.Item>
  
-            <Carousel.Item><img className="d-block w-100" src={img2} alt="Second slide" />
+            <Carousel.Item><img className=" pic img d-block w-100" src={img2} alt="Second slide" />
               <Carousel.Caption>
                 <div id="header">
  
@@ -48,13 +49,13 @@ class CityCarousel extends Component {
               </Carousel.Caption>
              </Carousel.Item>
  
-            <Carousel.Item><img className="d-block w-100" src={img3} alt="Third slide" />
+            <Carousel.Item><img className=" pic d-block w-100" src={img3} alt="Third slide" />
               <Carousel.Caption>
                 <div id="header">
                   </div>
               </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item><img className="d-block w-100" src={img2} alt="Fourth slide" />
+            <Carousel.Item><img className=" pic d-block w-100" src={img2} alt="Fourth slide" />
               <Carousel.Caption>
               <div id="header">
               
