@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
-import MainPost from '../components/MainPost'
 import TipModel from '../models/tips'
+import TipList from '../components/TipList'
+import NewPost from '../components/NewPost'
 
 class PostContainer extends Component {
 
+  state = {
+    tips: []
+  };
 
   componentDidMount() {
     this.fetchData();
@@ -33,6 +37,9 @@ class PostContainer extends Component {
     })
   }
 
+
+
+  
   createTip = (x) => {
     let newPost = {
       text: x
@@ -63,16 +70,24 @@ class PostContainer extends Component {
   // tips._id === tipId
 
   render() {
-    // let list = []
-    // for (var i=0; i<3; i++){
-    //   list.push( <MainPost/>)
-    // }
-  
+
 
     return (
-      <div>
+      <div className="PostContainer">
+                 <NewPost createTip = {this.createTip}/>
+
           <p>{this.props.title}</p>
-          <MainPost title= {this.props.title}/>
+          {/* <li><Link to={'/NewPost'}>New Post</Link></li> */}
+
+
+
+
+          <TipList 
+            tips= {this.state.tips}
+            updateTip= {this.updateTip}
+            deleteTip= {this.deleteTip} 
+            />
+          {/* <MainPost title= {this.props.title}/> */}
       </div>
     );
   }
