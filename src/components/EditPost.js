@@ -25,7 +25,7 @@ class EditPost extends Component {
     this.setState({ 
       tip: {
         tipId: this.props.tip._id,
-       text: ""
+        text: " "
       } 
     });
   }

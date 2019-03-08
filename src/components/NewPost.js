@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 class NewPost extends Component {
   state = {
     message: '',
-    city: ''
-   
+    city: '',
+    author: ''
   
   };
 
@@ -30,10 +30,13 @@ class NewPost extends Component {
     event.preventDefault();
     let message= this.state.message;
     let city= this.state.city
-    this.props.createTip(message,city)
+    let author = localStorage.title
+    this.props.createTip(message,city,author)
     this.setState({
       message: '',
-      city: ''
+      city: '',
+      author: ''
+  
     });
   }
 

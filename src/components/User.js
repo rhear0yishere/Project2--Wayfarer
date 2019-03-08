@@ -3,19 +3,12 @@ import UserPostContainer from '../containers/UserPostContainer'
 
 class User extends Component {
 
-  state = {
-    userInfo: []
-  }
-
-  // componentDidMount () {
-  //   axios.get('http://localhost:3002/api/)
-  // }
 
   render() {
-    console.log(this.props.email, "THIS")
+    console.log(localStorage.title, "LOCAL")
     return (
       <div>
-      <h1 className= "userTitle">Welcome  {this.props.email}</h1>
+      <h1 className= "userTitle">Welcome {localStorage.title}</h1>
       <UserPostContainer/>
       </div>
     );
