@@ -25,16 +25,16 @@ class TipModel {
     }
 
 
-    static findCity (city) {
-        let request = axios.get(`${ endPoint }/${city }`);
-        return request;
-    }
+    // static findCity (city) {
+    //     let request = axios.get(`${ endPoint }/${city }`);
+    //     return request;
+    // }
 
 
-    static findText(tip) {
-        let request = axios.get(`${ endPoint }/${tip._text }`);
-        return request;
-      }
+    // static findText(tip) {
+    //     let request = axios.get(`${ endPoint }/${tip._text }`);
+    //     return request;
+    //   }
 
 }
 

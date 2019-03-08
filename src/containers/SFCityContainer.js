@@ -30,7 +30,7 @@ class SFCityContainer extends Component {
           })
         }} 
   })
-  console.log(this.state.tips)
+  // console.log(this.state.tips)
 }
 
 fetchDataSanFran=() => {
@@ -43,14 +43,14 @@ fetchDataSanFran=() => {
    });
   TipModel.all().then( (res) => {
       for(let i =0; i<res.data.tips.length; i++){
-        if(res.data.tips[i].city=== 'San Francisco' ){
+        if(res.data.tips[i].city=== 'San Francisco' && this.state.title==='San Francisco' ){
           tipList.push(res.data.tips[i].text)
           this.setState({
             tips: tipList
           })
         }} 
 })
-console.log(this.state.tips)
+// console.log(this.state.tips)
 
 }
 
@@ -63,14 +63,14 @@ fetchDataLondon=() => {
   });;
   TipModel.all().then( (res) => {
     for(let i =0; i<res.data.tips.length; i++){
-      if(res.data.tips[i].city=== 'London' ){
+      if(res.data.tips[i].city=== 'London' && this.state.title==='London' ){
         tipList.push(res.data.tips[i].text)
         this.setState({
           tips: tipList
         })
       }} 
 })
-console.log(this.state.tips)
+// console.log(this.state.tips)
 
 }
 
