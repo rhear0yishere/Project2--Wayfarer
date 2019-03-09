@@ -8,7 +8,6 @@ class PostContainer extends Component {
     // for (var i=0; i<3; i++){
     //   list.push( <MainPost/>)
     // }
-    console.log(this.props, 'postcontainer');
     return (
       <div>
           <TipList tipData={this.props.tips}/>

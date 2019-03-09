@@ -12,13 +12,12 @@ class MainPost extends Component {
     //   }
     // }
 
-    console.log(this.props, 'post props ');
-
     return (
       <div className={'city-post'}>
          <div> {this.props.tipData.tip.city}</div>
          <div> {this.props.tipData.tip.author} </div>
          <div> {this.props.tipData.tip.title} </div>
+         <div> {this.props.tipData.tip.text} </div>
       </div>
     );
   }
