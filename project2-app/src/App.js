@@ -7,7 +7,7 @@ import LoginPage from './components/LoginPage';
 import { Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 import {Redirect} from 'react-router-dom'
-
+import './Model/userModel'
 import SignupPage from './components/SignupPage'
 
 

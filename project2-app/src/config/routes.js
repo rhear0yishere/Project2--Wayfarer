@@ -12,7 +12,7 @@ import NewPost from '../components/NewPost'
 
 export default (
     <Switch>
-      <Route exact path='/' component={ Landing } />
+      {/* <Route exact path='/' component={ Landing } /> */}
       <Route path='/User' component={ User } />
       <Route path='/AllPosts' component={ AllPosts } />
       <Route path='/SF' component={ SFCityContainer } />
