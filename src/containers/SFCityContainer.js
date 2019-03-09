@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import SFCityInfo from '../components/SFCityInfo'
 import PostContainer from './PostContainer'
+import TipModel from '../models/tips'
 
 class SFCityContainer extends Component {
 

@@ -93,3 +93,22 @@ Menu.props.name {
   padding-top: 30px;
   font-size: 12px;
 }
+
+/* .postText{
+  display: flex;
+  flex-direction: row;
+} */
+
+
+.postForm{
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  /* margin-left:100px; */
+
+}
+
+.remove{
+  margin-left: 150px;
+}
+

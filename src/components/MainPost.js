@@ -1,19 +1,40 @@
 import React, { Component } from 'react';
+import EditPost from '../components/EditPost'
 
 class MainPost extends Component {
+
+deletingTip = (event) => {
+  event.preventDefault();
+  this.props.deleteTip(this.props.tip);
+  
+}
+
   render() {
     
-    let list = ['Seattle', 'Seattle', 'San Francisco']
-    for (var i=0; i<=list.length;i++){
-      if (list[i]===this.props.title){
-        console.log(list[i])
-      }
-    }
     return (
+      
+      <li data-tips-index={ this.props.tip._id }>
       <div>
-          <h1>{this.props.title}</h1>
-          <p>Main Post Text</p>
-      </div>
+          <span>{ this.props.tip.text }</span>
+          <a className = "remove"
+            href="#removeTip"
+            className='remove'
+            onClick={this.deletingTip}
+            >
+              Remove
+          </a> 
+        </div>
+        
+        <EditPost
+          tip= {this.props.tip}
+          buttonName = "Edit Tip"
+          updateTip = {this.props.updateTip}
+        
+        />
+        
+      </li>
+
+      
     );
   }
 }

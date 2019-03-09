@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import ProfileInfo from './ProfileInfo'
 import UserPostContainer from '../containers/UserPostContainer'
 
+
 class User extends Component {
 
   state = {

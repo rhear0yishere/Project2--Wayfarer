@@ -1,41 +1,50 @@
-
 import React, { Component } from 'react';
 import MainPost from '../components/MainPost'
-
-// let tips = [
-
-//   {"user": {"email": "chike@gmail.com", "password": "something1"},
-//   "tip": {"author": "chike", "image": "", "title": "chike title", "city": "Boston"}},
-  
-//   {"user": {"email": "eunice@gmail.com", "password": "something2"},
-//   "tip": {"author": "eunice", "image": "", "title": "eunice title", "city": "SF"}},
-  
-//   {"user": {"email": "tristan@gmail.com", "password": "something3"},
-//   "tip": {"author": "tristan", "image": "", "title": "tristan title", "city": "Miami"}}
-  
-//   ];
+import UserPosts from '../components/UserPosts'
 
 class TipList extends Component {
-  state = {
-      tipList: []
-  }
   render() {
-    let context = this;
-    this.props.tipData.forEach((tip, index)=>{
-      console.log()
-        context.state.tipList.push(
-          <MainPost tipData={tip}/>
-        );
-    });
+    let tips = this.props.tips.map ((tip) => {
+    return (
+      <div>
+          <MainPost 
+            key = {tip._id}
+            tip = {tip}
+            deleteTip ={this.props.deleteTip}
+            updateTip= {this.props.updateTip}
+          />
+
+      </div>
+    )
+    })
+
+    let tips2 = this.props.tips2.map ((tip) => {
+      return (
+        <div>
+            <MainPost 
+              key = {tip._id}
+              tip = {tip}
+              deleteTip ={this.props.deleteTip}
+              updateTip= {this.props.updateTip}
+            />
+  
+        </div>
+      )
+      })
+
 
     return (
-      <div className="tipList">
-        {this.state.tipList}
-      </div>
+    <div>
+      <ul className= "allTips">
+        {tips}
+      </ul>
+      <ul className= "specificUser">
+        <h2>My Tips</h2>
+        {tips2}
+      </ul>
+    </div>
     )
   }
 }
 
 export default TipList;
-
-
