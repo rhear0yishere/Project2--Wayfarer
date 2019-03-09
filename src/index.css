@@ -87,17 +87,18 @@ Menu.props.name {
   padding-top: 30px;
   font-size: 12px;
 }
-/* 
-.postText{
-  padding-right: 500px;
-  padding-bottom: 500px;
+
+/* .postText{
+  display: flex;
+  flex-direction: row;
 } */
+
 
 .postForm{
   display: flex;
   flex-direction: column;
-  width: 40%;
-  margin-left:100px;
+  width: 70%;
+  /* margin-left:100px; */
 
 }
 

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const endPoint = `http://localhost:3002/api/tip`
+const endPoint = `https://still-journey-70148.herokuapp.com/`
 
 class TipModel {
     static all(){
@@ -22,11 +22,6 @@ class TipModel {
     static delete (tip) {
         let request = axios.delete(`${ endPoint }/${tip._id }`);
         return request; 
-    }
-
-    static findCity (city) {
-        let request = axios.get(`${ endPoint }/${city }`);
-        return request;
     }
 
 }

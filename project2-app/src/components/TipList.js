@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import MainPost from '../components/MainPost'
 
@@ -8,10 +7,9 @@ class TipList extends Component {
     return (
       <div>
           <MainPost 
-            key = {tip._id}
-            tip = {tip}
-            deleteTip ={this.props.deleteTip}
-            updateTip= {this.props.updateTip}
+          key = {TipList._id}
+          tip = {tip}
+          deleteTip ={this.props.deleteTip}
           />
 
       </div>
