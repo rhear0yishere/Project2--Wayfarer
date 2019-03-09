@@ -7,7 +7,8 @@ import LoginPage from './components/LoginPage';
 import { Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 import {Redirect} from 'react-router-dom'
-import './Model/userModel'
+import Landing from './components/Landing'
+
 import SignupPage from './components/SignupPage'
 
 
@@ -46,7 +47,7 @@ class App extends Component {
 
   signUp = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3001/user/signup', 
+    axios.post('http://localhost:3002/user/signup', 
 
 			{ email: this.state.email,
       	password: this.state.password }
@@ -76,8 +77,9 @@ logOut = () => {
 
 
   handleLogIn = (e) => {
+    console.log('loggggggg')
     e.preventDefault()
-    axios.post('http://localhost:3001/user/login', {
+    axios.post('http://localhost:3002/user/login', {
       email: this.state.email,
       password: this.state.password
     })
@@ -93,32 +95,43 @@ logOut = () => {
   render() {
     return (
       <div >
-           <Nav isLoggedIn={this.state.LoggedIn}
-           loggedOut={this.logOut}/>
+           <Nav 
+            isLoggedIn={this.state.LoggedIn}
+            loggedOut={this.logOut} 
+            takeInput={this.takeInput} 
+            handleLogIn={this.handleLogIn} 
+            signUp={this.signUp}
+          />
 
          { MyRoutes }  
          <Switch>
-           <Route path = '/signup' 
+
+           
+           <Route path = '/' 
            render = {(props) => {
              if(this.state.LoggedIn){
-               return <Redirect to="/user"/>
+               return (
+                <Redirect to="/user"/>
+               )
              } else {
               return(
-                <SignupPage {...props} LoggedIn={this.state.LoggedIn} takeInput={this.takeInput} signUp={this.signUp} /> )
+                
+                  <Landing/>
+              )
              }
              }}
            />
-          <Route path='/login' exact
+          {/* <Route path='/login' exact
               render={(props) => {
                 if(this.state.LoggedIn){
                   return <Redirect to="/user"/>
                 } else {
                 return (
-                  <LoginPage LoggedIn={this.state.LoggedIn} handleInput={this.takeInput} handleLogIn={this.handleLogIn} />
+                  
                 )
                 }
               }}
-          />
+          /> */}
           <Route path='/profile' exact
               render={(props) => {
                 return (
