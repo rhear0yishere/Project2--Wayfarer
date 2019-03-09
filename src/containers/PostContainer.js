@@ -1,5 +1,20 @@
 
-import React, { Component } from 'react';
+// import React, { Component } from 'react';
+// <<<<<<< chike
+// import TipList from '../components/TipList'
+
+// class PostContainer extends Component {
+
+//   render() {
+//     // let list = []
+//     // for (var i=0; i<3; i++){
+//     //   list.push( <MainPost/>)
+//     // }
+//     return (
+//       <div>
+//           <TipList tipData={this.props.tips}/>
+// =======
+
 import TipModel from '../models/tips'
 import TipList from '../components/TipList'
 import NewPost from '../components/NewPost'
@@ -98,6 +113,7 @@ class PostContainer extends Component {
             deleteTip= {this.deleteTip} 
             />
           {/* <MainPost title= {this.props.title}/> */}
+
       </div>
     );
   }
