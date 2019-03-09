@@ -4,10 +4,14 @@ import React, { Component } from 'react';
 class UserPosts extends Component {
   render() {
     return (
-      <div>
+      <div className="userPost">
+      <div className="profilePic">
+
+      </div>
+
           <h2>User Post Title</h2>
           <p>User Post paragraph</p>
-          <button>View More</button>
+          <button >View More</button>
       </div>
     );
   }
