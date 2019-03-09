@@ -11,7 +11,6 @@ import SignupPage from './components/SignupPage'
 import User from './components/User'
 import UserPostContainer from './containers/UserPostContainer';
 
-
 class App extends Component {
  
  
@@ -23,7 +22,6 @@ class App extends Component {
     title: ''
   }
 
-  
   componentDidMount () {
     if (localStorage.token) {
       this.setState({
@@ -45,7 +43,7 @@ class App extends Component {
 
   signUp = (e) => {
     e.preventDefault()
-    axios.post('https://still-journey-70148.herokuapp.com/', 
+    axios.post('https://still-journey-70148.herokuapp.com', 
 
 			{ email: this.state.email,
       	password: this.state.password }
@@ -63,8 +61,6 @@ class App extends Component {
       .catch(err => console.log(err))
   }
 
-
-
 logOut = () => {
   this.setState({
     email: '',
@@ -77,7 +73,7 @@ logOut = () => {
 
   handleLogIn = (e) => {
     e.preventDefault()
-    axios.post('https://still-journey-70148.herokuapp.com/', {
+    axios.post('https://still-journey-70148.herokuapp.com', {
       email: this.state.email,
       password: this.state.password
     })

@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import TipModel from '../models/tips'
 import TipList from '../components/TipList'
@@ -8,11 +7,18 @@ class PostContainer extends Component {
 
   state = {
     tips: [],
-    specificTip: []
+    specificTip: [],
+    userSpecific: []
   };
 
  componentWillReceiveProps(){
    this.fetchData();
+ }
+
+ componentDidMount(){
+  this.fetchData();
+
+  this.fetchDataUser();
  }
 
 
@@ -36,6 +42,28 @@ class PostContainer extends Component {
 
   }
 
+
+  fetchDataUser(){
+
+    TipModel.all().then( (res) => {
+      this.setState ({
+        tips: res.data.tips
+      })
+      
+      let userSpecific =[];
+      for(let i=0; i<this.state.tips.length;i++){
+        if (localStorage.title === this.state.tips[i].author){
+          userSpecific.push(this.state.tips[i])
+          this.setState({
+            userSpecific: userSpecific
+          })
+          }
+      }
+
+    })
+
+  }
+
   deleteTip = (id) => {
     TipModel.delete(id).then((res)=>{
       let tips = this.state.specificTip.filter(function(tip){
@@ -48,8 +76,6 @@ class PostContainer extends Component {
       this.setState({tips});
     })
   }
-
-
 
   createTip = (message, city,author) => {
     let newPost = {
@@ -70,16 +96,10 @@ class PostContainer extends Component {
       return tip._id === tipId;
     }
     TipModel.update(tipId, tipText).then((res) => {
-      // let tips = this.state.tips;
-      // tips.find(tip => updatingTip(tip)).body = tipText.text;
-      // this.setState({ tips });
-      // let data = JSON.parse(res.data);
       console.log(res);
     })
   }
 
-
-  // tips._id === tipId
 
   render() {
 
@@ -89,15 +109,13 @@ class PostContainer extends Component {
                  <NewPost createTip = {this.createTip}/>
 
           <p>{this.props.title}</p>
-          {/* <li><Link to={'/NewPost'}>New Post</Link></li> */}
-
 
           <TipList 
             tips= {this.state.specificTip}
+            tips2= {this.state.userSpecific}
             updateTip= {this.updateTip}
             deleteTip= {this.deleteTip} 
             />
-          {/* <MainPost title= {this.props.title}/> */}
       </div>
     );
   }

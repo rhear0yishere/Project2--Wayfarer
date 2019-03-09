@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import UserPosts from '../components/UserPosts'
-// import axios from 'axios';
-
+import PostContainer from '../containers/PostContainer'
 
 
 class UserPostContainer extends Component {
@@ -9,13 +8,9 @@ class UserPostContainer extends Component {
 
 
   render() {
-    let list = []
-    for (var i=0; i<5; i++){
-      list.push(<UserPosts/>)
-    }
     return (
       <div>
-          {list}
+        <PostContainer/>
       </div>
     );
   }

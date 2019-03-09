@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import UserPostContainer from '../containers/UserPostContainer'
 
+
 class User extends Component {
 
 

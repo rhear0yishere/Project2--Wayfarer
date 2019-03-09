@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const endPoint = `https://still-journey-70148.herokuapp.com/`
+const endPoint = 'https://still-journey-70148.herokuapp.com'
 
 class TipModel {
     static all(){

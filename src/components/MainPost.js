@@ -33,6 +33,8 @@ deletingTip = (event) => {
         />
         
       </li>
+
+      
     );
   }
 }

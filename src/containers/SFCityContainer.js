@@ -3,7 +3,6 @@ import SFCityInfo from '../components/SFCityInfo'
 import PostContainer from './PostContainer'
 import TipModel from '../models/tips'
 
-
 class SFCityContainer extends Component {
 
   state = {
@@ -37,6 +36,12 @@ changeSanFran= () => {
      imagePath: "https://cdn.thecrazytourist.com/wp-content/uploads/2017/09/ccimage-shutterstock_412496293.jpg"
     });
 }
+
+  getCities = () => {
+    TipModel.findCity(this.state.title).then((res)=>{
+      console.log(res);
+    })
+  }
 
   render() {
 

@@ -1,6 +1,6 @@
-
 import React, { Component } from 'react';
 import MainPost from '../components/MainPost'
+import UserPosts from '../components/UserPosts'
 
 class TipList extends Component {
   render() {
@@ -18,10 +18,31 @@ class TipList extends Component {
     )
     })
 
+    let tips2 = this.props.tips2.map ((tip) => {
+      return (
+        <div>
+            <MainPost 
+              key = {tip._id}
+              tip = {tip}
+              deleteTip ={this.props.deleteTip}
+              updateTip= {this.props.updateTip}
+            />
+  
+        </div>
+      )
+      })
+
+
     return (
-      <ul>
+    <div>
+      <ul className= "allTips">
         {tips}
       </ul>
+      <ul className= "specificUser">
+        <h2>My Tips</h2>
+        {tips2}
+      </ul>
+    </div>
     )
   }
 }
