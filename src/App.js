@@ -7,9 +7,9 @@ import LoginPage from './components/LoginPage';
 import { Switch, Route } from 'react-router-dom';
 import axios from 'axios';
 import {Redirect} from 'react-router-dom'
-
 import SignupPage from './components/SignupPage'
-
+import User from './components/User'
+import UserPostContainer from './containers/UserPostContainer';
 
 
 class App extends Component {
@@ -19,7 +19,8 @@ class App extends Component {
     email: '' ,
     password: '',
     LoggedIn: false,
-    user: null
+    user: null,
+    title: ''
   }
 
   
@@ -35,29 +36,28 @@ class App extends Component {
     }
   }
 
-
-
-
   takeInput = (e) => {
     this.setState ({
       [e.target.name] : e.target.value
+      
     })
   }
 
   signUp = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3001/user/signup', 
+    axios.post('https://still-journey-70148.herokuapp.com/', 
 
 			{ email: this.state.email,
       	password: this.state.password }
 			)
       .then( response => {
-        console.log(response)
         localStorage.token = response.data.signedJwt
+        localStorage.title = response.data.aUser.email
+        console.log(response.data)
           this.setState({
             LoggedIn: true,
-            user: response.data.user
-
+            user: response.data.user,
+            title:localStorage.title
           })
       })
       .catch(err => console.log(err))
@@ -77,15 +77,19 @@ logOut = () => {
 
   handleLogIn = (e) => {
     e.preventDefault()
-    axios.post('http://localhost:3001/user/login', {
+    axios.post('https://still-journey-70148.herokuapp.com/', {
       email: this.state.email,
       password: this.state.password
     })
     .then( response => {
       console.log(response.data);
       localStorage.token = response.data.signedJwt
+      localStorage.title = response.data.user.email
+
       this.setState({
-        LoggedIn: true
+        LoggedIn: true,
+        title:localStorage.title
+
       })
     })
     .catch(err => console.log(err))
@@ -101,7 +105,7 @@ logOut = () => {
            <Route path = '/signup' 
            render = {(props) => {
              if(this.state.LoggedIn){
-               return <Redirect to="/user"/>
+               return <Redirect to="/AllPosts"/>
              } else {
               return(
                 <SignupPage {...props} LoggedIn={this.state.LoggedIn} takeInput={this.takeInput} signUp={this.signUp} /> )
@@ -111,7 +115,7 @@ logOut = () => {
           <Route path='/login' exact
               render={(props) => {
                 if(this.state.LoggedIn){
-                  return <Redirect to="/user"/>
+                  return <Redirect to="/AllPosts"/>
                 } else {
                 return (
                   <LoginPage LoggedIn={this.state.LoggedIn} handleInput={this.takeInput} handleLogIn={this.handleLogIn} />
@@ -119,10 +123,10 @@ logOut = () => {
                 }
               }}
           />
-          <Route path='/profile' exact
+          <Route path='/User' exact
               render={(props) => {
                 return (
-                  <LoginPage LoggedIn={this.state.LoggedIn} handleInput={this.takeInput} handleLogIn={this.handleLogIn} />
+                  <User title={this.state.title} />
                 )
               }}
           />
@@ -136,3 +140,5 @@ logOut = () => {
 }
 
 export default App;
+
+

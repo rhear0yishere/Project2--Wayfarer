@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react';
 import SFCityInfo from '../components/SFCityInfo'
 import PostContainer from './PostContainer'
@@ -38,12 +37,6 @@ changeSanFran= () => {
      imagePath: "https://cdn.thecrazytourist.com/wp-content/uploads/2017/09/ccimage-shutterstock_412496293.jpg"
     });
 }
-
-  getCities = () => {
-    TipModel.findCity(this.state.title).then((res)=>{
-      console.log(res);
-    })
-  }
 
   render() {
 
