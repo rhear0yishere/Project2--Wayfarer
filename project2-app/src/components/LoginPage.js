@@ -11,11 +11,11 @@ class LoginPage extends Component {
       <Form className='Login'>
       <Form.Field>
         <label>Username</label>
-        <input placeholder='Username' name="email" onChange={this.props.handleInput} />
+        <input placeholder='Username' name="email" onChange={this.props.takeInput} />
       </Form.Field>
       <Form.Field>
         <label>Password</label>
-        <input placeholder='Password' name="password" onChange={this.props.handleInput} />
+        <input placeholder='Password' name="password" onChange={this.props.takeInput} />
       </Form.Field>
       <Form.Field>
         <Checkbox label='I agree to the Terms and Conditions' />
