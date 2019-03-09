@@ -106,3 +106,13 @@ Menu.props.name {
   margin-left: 150px;
 }
 
+
+.profilePic {
+  width: 5%;
+  height:5%;
+}
+.userPost {
+  border: solid grey 1px;
+  width: 50%;
+} 
+
