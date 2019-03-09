@@ -1,21 +1,17 @@
 import React, { Component } from 'react';
-import MainPost from '../components/MainPost'
+import TipList from '../components/TipList'
 
 class PostContainer extends Component {
-
-
 
   render() {
     // let list = []
     // for (var i=0; i<3; i++){
     //   list.push( <MainPost/>)
     // }
-  
-
+    console.log(this.props, 'postcontainer');
     return (
       <div>
-          <p>{this.props.title}</p>
-          <MainPost title= {this.props.title}/>
+          <TipList tipData={this.props.tips}/>
       </div>
     );
   }

@@ -1,23 +1,24 @@
-// import React, { Component } from 'react';
-
-
-// class CitiesList extends Component {
+import React, { Component } from 'react';
 
 
 
-//   render() {
-//     return (
-//       <div className= "citiesList">
-//         <ul>
+class CitiesList extends Component {
 
-//           <button>San Fran</button>
-//           <button>Seattle</button>
-//           <button>London</button>
 
-//         </ul>
-//       </div>
-//     );
-//   }
-// }
 
-// export default CitiesList;
+  render() {
+    return (
+      <div className= "citiesList">
+        <ul>
+  
+          <button>San Fran</button>
+          <button>Seattle</button>
+          <button>London</button>
+
+        </ul>
+      </div>
+    );
+  }
+}
+
+export default CitiesList;
