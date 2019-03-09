@@ -75,7 +75,13 @@ Menu.props.name {
   padding-bottom: 500px;
 }
 
+.postForm{
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  margin-left:100px;
 
+}
 
 .footer {
   width:100%;

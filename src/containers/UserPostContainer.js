@@ -6,7 +6,6 @@ import PostContainer from '../containers/PostContainer'
 class UserPostContainer extends Component {
 
 
-
   render() {
     return (
       <div>

@@ -3,67 +3,28 @@ import React, { Component } from 'react';
 class NewPost extends Component {
   state = {
     message: '',
-    city: '',
-    author: ''
-  
+    title: ''
   };
 
-  onInputChangeMesssage = (event) => {
-    this.setState({
-      message: event.target.value
-    })
-  }
 
-  onInputChangeTitle = (event) => {
-    this.setState({
-      title: event.target.value
-    })
-  }
-  changeCity = (event) => {
-     this.setState({
-       city: event.target.value
-      });
-
-  }
-  
   onFormSubmit = (event) => {
     event.preventDefault();
-    let message= this.state.message;
-    let city= this.state.city
-    let author = localStorage.title
-    this.props.createTip(message,city,author)
-    this.setState({
-      message: '',
-      city: '',
-      author: ''
-  
-    });
   }
 
   render() {
-
     return (
-      <div >
-        <form className="postForm" >
-        <input
-         className= "postCity"
-         value={ this.state.city}
-         onChange={ this.changeCity }
-         placeholder="City"
-         type="text"
-
-        />
-
-        {/* <select name="Cities" >
-            <option value= "None">Pick City</option>
+      <div>
+        <form className="postForm"  onSubmit={ this.onFormSubmit }>
+        <select name="Cities">
+            <option value="None">Pick City</option>
             <option value="Seattle">Seattle</option>
             <option value="San Francisco">San Francisco</option>
             <option value="London">London</option>
-        </select> */}
+        </select>
         <input
          className= "postTitle"
          value={ this.state.title }
-         onChange={ this.onInputChangeTitle }
+         onChange={ this.onInputChange }
          placeholder="Post Title"
          type="text"
 
@@ -71,13 +32,13 @@ class NewPost extends Component {
           <textarea 
             className= "postText"
             value={ this.state.message }
-            onChange={ this.onInputChangeMesssage }
+            onChange={ this.onInputChange }
             placeholder="Post message"
             type="text"
           />
           <button 
             type="submit"  
-            className="btn" onClick= {this.onFormSubmit} >Submit Post </button>
+            className="btn">Submit Post</button>
         </form>
       </div>
     );
