@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
+<<<<<<< HEAD
     "bootstrap": "^4.3.1",
     "cors": "^2.8.5",
     "react": "^16.8.4",
@@ -23,6 +24,21 @@
     "semantic-ui-css": "^2.4.1",
     "semantic-ui-react": "^0.85.0",
     "video-react": "^0.13.3"
+=======
+    "body-parser": "^1.18.3",
+    "bootstrap": "^4.3.1",
+    "cors": "^2.8.5",
+    "react": "^16.8.3",
+    "react-bootstrap": "^1.0.0-beta.5",
+    "react-dom": "^16.8.3",
+    "react-responsive-carousel": "^3.1.47",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "^2.1.8",
+    "reactstrap": "^7.1.0",
+    "semantic-ui": "^2.4.2",
+    "semantic-ui-css": "^2.4.1",
+    "semantic-ui-react": "^0.85.0"
+>>>>>>> a96c7782d5a63642b02c6fbe4be98e57e6d1ec15
   },
   "scripts": {
     "start": "react-scripts start",

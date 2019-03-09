@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+<<<<<<< HEAD
 import { Menu, Modal,Button } from 'semantic-ui-react'
 import ReactDOM from 'react-dom';
 import SignupPage from './SignupPage';
@@ -10,10 +11,14 @@ import LoginPage from './LoginPage';
 
 
 
+=======
+import { Menu, Segment, MenuItem } from 'semantic-ui-react'
+>>>>>>> a96c7782d5a63642b02c6fbe4be98e57e6d1ec15
 
 
  class Nav extends Component {
   
+<<<<<<< HEAD
   constructor() {
     super();
 
@@ -47,11 +52,18 @@ import LoginPage from './LoginPage';
 
   render() {
     
+=======
+  render() {
+>>>>>>> a96c7782d5a63642b02c6fbe4be98e57e6d1ec15
     if(this.props.isLoggedIn){
       return (
       
         <div className='nav-container'>
+<<<<<<< HEAD
            <Menu width={8} fixed='top' inverted className='nav'>
+=======
+           <Menu className='nav'>
+>>>>>>> a96c7782d5a63642b02c6fbe4be98e57e6d1ec15
             <Menu.Item as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
             
             <Menu.Menu position='right'>
@@ -85,6 +97,7 @@ import LoginPage from './LoginPage';
             <Menu.Item as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
             
             <Menu.Menu position='right'>
+<<<<<<< HEAD
               <Menu.Item>
               <Modal  trigger={<Button>Sign In</Button>}>
               <Modal.Header>Select a Photo</Modal.Header>
@@ -109,6 +122,22 @@ import LoginPage from './LoginPage';
         </div>
       
       
+=======
+              <Menu.Item
+              //   active={activeItem === 'SignIn'}
+                onClick={this.handleItemClick}
+              > <Link to="/login">Sign In</Link></Menu.Item>
+             
+              <Menu.Item as={Link} to='/signup'
+                name='Sign Up'
+              //   active={activeItem === 'SignUp'}
+                onClick={this.handleItemClick}
+              />
+              
+            </Menu.Menu>
+          </Menu> 
+        </div>
+>>>>>>> a96c7782d5a63642b02c6fbe4be98e57e6d1ec15
       )
     }
     
