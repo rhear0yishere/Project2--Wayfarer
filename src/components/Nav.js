@@ -3,10 +3,6 @@ import { Link } from 'react-router-dom';
 import { Menu, Segment, MenuItem } from 'semantic-ui-react'
 
 
-
-
-
-
  class Nav extends Component {
   
   render() {
