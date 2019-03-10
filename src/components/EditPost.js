@@ -33,14 +33,15 @@ class EditPost extends Component {
   render() {
     return (
       <div>
-        <div className="updateTodoForm">
-          <form onSubmit={ this.onSubmit }>
+        <div className="updateTipForm">
+          <form  onSubmit={ this.onSubmit }>
             <input 
+            className="updateTipFormInput"
               type="text"
               onChange={ this.onChange }
               placeholder="update this tip here"
               value={(this.state && this.state.tip.text) || ''} />
-            <button type="submit">Save</button>
+            <button className= "save" type="submit">Save</button>
           </form>
         </div>
       </div>

@@ -9,7 +9,11 @@ import axios from 'axios';
 import {Redirect} from 'react-router-dom'
 import SignupPage from './components/SignupPage'
 import User from './components/User'
-import UserPostContainer from './containers/UserPostContainer';
+import AllPosts from './components/AllPosts';
+import NewPost from './components/NewPost';
+
+ 
+
 
 class App extends Component {
  
@@ -43,8 +47,8 @@ class App extends Component {
 
   signUp = (e) => {
     e.preventDefault()
-    axios.post('https://still-journey-70148.herokuapp.com/user/signup', 
-    // axios.post('http://localhost:3001/user/signup', 
+    // axios.post('https://still-journey-70148.herokuapp.com/user/signup', 
+    axios.post('http://localhost:3001/user/signup', 
 
 			{ email: this.state.email,
       	password: this.state.password }
@@ -74,8 +78,8 @@ logOut = () => {
 
   handleLogIn = (e) => {
     e.preventDefault()
-    axios.post('https://still-journey-70148.herokuapp.com/user/login', {
-    // axios.post('http://localhost:3001/user/login',{
+    // axios.post('https://still-journey-70148.herokuapp.com/user/login', {
+    axios.post('http://localhost:3001/user/login',{
       email: this.state.email,
       password: this.state.password
     })
@@ -103,7 +107,7 @@ logOut = () => {
            <Route path = '/signup' 
            render = {(props) => {
              if(this.state.LoggedIn){
-               return <Redirect to="/AllPosts"/>
+               return <Redirect to="/User"/>
              } else {
               return(
                 <SignupPage {...props} LoggedIn={this.state.LoggedIn} takeInput={this.takeInput} signUp={this.signUp} /> )
@@ -113,7 +117,7 @@ logOut = () => {
           <Route path='/login' exact
               render={(props) => {
                 if(this.state.LoggedIn){
-                  return <Redirect to="/AllPosts"/>
+                  return <Redirect to="/User"/>
                 } else {
                 return (
                   <LoginPage LoggedIn={this.state.LoggedIn} handleInput={this.takeInput} handleLogIn={this.handleLogIn} />
@@ -124,10 +128,22 @@ logOut = () => {
           <Route path='/User' exact
               render={(props) => {
                 return (
-                  <User title={this.state.title} />
+                  <User LoggedIn={this.state.LoggedIn} title={this.state.title} />
                 )
               }}
           />
+
+          <Route
+              path='/AllPosts' exact
+              render={(props) => {
+                return (
+                  <AllPosts LoggedIn={this.state.LoggedIn} />
+                )
+              }}
+            />
+    
+          
+
          </Switch>
 
           <Footer/>   
@@ -138,5 +154,3 @@ logOut = () => {
 }
 
 export default App;
-
-

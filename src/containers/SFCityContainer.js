@@ -9,7 +9,7 @@ class SFCityContainer extends Component {
     title: 'Seattle',
     description : "Seattle, a city on Puget Sound in the Pacific Northwest, is surrounded by water, mountains and evergreen forests, and contains thousands of acres of parkland. Washington State’s largest city, it’s home to a large tech industry, with Microsoft and Amazon headquartered in its metropolitan area. The futuristic Space Needle, a 1962 World’s Fair legacy, is its most iconic landmark. "
     ,imagePath: "https://cdn.thecrazytourist.com/wp-content/uploads/2019/02/ccimage-shutterstock_278248754.jpg",
-
+    LoggedIn: this.props.LoggedIn
   };
 
 changeLondon= () => {
@@ -44,14 +44,15 @@ changeSanFran= () => {
   }
 
   render() {
+    console.log(this.state.LoggedIn, "IS IT")
 
 
     return (
-  <div>
-
+  <div className= "CITYDIV">
+    
     <div className= "citiesList">
-    <h1>Cities</h1>
-        <ul>
+    <h2 className="citiesTitle">Cities</h2>
+        <ul className="citiesButtons">
           <button className={"button"} onClick={this.changeSeattle}>Seattle</button>
           <button className={"button"} onClick={this.changeLondon}>London</button>
           <button className={"button"} onClick={this.changeSanFran}>San Francisco</button>
@@ -62,8 +63,7 @@ changeSanFran= () => {
 
       <div className ="mainCity">
           <SFCityInfo title ={this.state.title} description= {this.state.description} imagePath={this.state.imagePath}/>
-          <PostContainer title ={this.state.title}/>
-      </div>
+          <PostContainer title ={this.state.title} LoggedIn= {this.state.LoggedIn}/>       </div>
 
 
 

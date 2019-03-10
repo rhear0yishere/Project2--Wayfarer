@@ -1,3 +1,19 @@
+
+*{
+  background-color: #F4FBFF;
+}
+
+.navBackground{
+  background-color: white !important;
+}
+
+.button:focus{
+  outline:none;
+
+}
+
+
+
 body {
   margin: 0;
   padding: 0;
@@ -6,6 +22,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
 code {
@@ -26,18 +43,47 @@ code {
 }
 
 .citiesList{
-  border: 1px solid black;
+  /* border: 1px solid black; */
   width: 20%;
-  
+  height: 400px;
+  margin-right:20px;  
+}
+
+.citiesList h2{
+  padding-bottom:25px;
+  border-bottom: 1px solid black
+}
+
+
+.citiesButtons{
+
+  display:flex;
+  flex-direction: column;
+  margin-left:0px;
+  padding-left: 0px;
+  margin-top:30px; 
+}
+
+.button{
+  margin-bottom: 40px;
+  padding:20px;
+  font-size:30px;
+  border:none;
+  width:100%;
 }
 
 .mainCity{
   width:70%;
-  border: 1px solid black;
-  margin-left: 400px;
-  
+  /* border: 1px solid black; */
+  justify-content: center
+ 
 }
 
+.CITYDIV{
+  display: flex;
+  text-align: center;
+  margin-top:30px;
+}
 
 .about h1 {
   text-align:center;
@@ -51,9 +97,7 @@ code {
 .nav  {
   padding-top: 20px;
   padding-bottom: 20px;
-  background-color:red;
 }
-
 
 Menu.props.name {
   font-size:20px;
@@ -69,23 +113,34 @@ Menu.props.name {
   width:50%;
 }
 
+.updateTipFormInput{
+  width:300px;
+  background-color: white;
+ }
 
+ 
 .postText{
+  margin-top:5px;
   padding-right: 500px;
-  padding-bottom: 500px;
+  padding-bottom: 100px;
 }
 
-
+.postTitle{
+  margin-top:5px;
+}
 
 .footer {
   width:100%;
   height:10vh;
   background-color: grey;
 }
+
 .footer h3 {
   text-align: center;
   padding-top: 30px;
   font-size: 12px;
+  background-color: grey;
+
 }
 
 /* .postText{
@@ -93,16 +148,47 @@ Menu.props.name {
   flex-direction: row;
 } */
 
+.cityImage{
+  height:500px;
+}
 
 .postForm{
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 100%;
+  margin-top:30px;  
   /* margin-left:100px; */
 
 }
 
-.remove{
-  margin-left: 150px;
+input, textarea{
+  background-color: white;
+}
+
+.submitTip{
+  border: 1px solid black;
+  width:10%;
+  padding: 5px;
+  background-color: lightgray;  
+  align-self: flex-end;
+  margin-top:10px;
+  margin-bottom: 10px;
+
+
+}
+
+li{
+  list-style-type: none;
+}
+
+.specificUser{
+  display: flex;
+  flex-direction: column-reverse;
+}
+.remove {
+  margin-left: 250px;
+}
+.save{
+  margin-left:20px;
 }
 

@@ -13,8 +13,7 @@ import SignupModal from '../components/SignupModal';
 export default (
     <Switch>
       <Route exact path='/' component={ Landing } />
-    
-      <Route path='/AllPosts' component={ AllPosts } />
+      {/* <Route path='/AllPosts' component={ AllPosts } /> */}
       <Route path='/SF' component={ SFCityContainer } />
       
 

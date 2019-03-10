@@ -44,6 +44,7 @@ class NewPost extends Component {
 
     return (
       <div >
+        <h1>Post A Tip</h1>
         <form className="postForm" >
         <input
          className= "postCity"
@@ -77,7 +78,7 @@ class NewPost extends Component {
           />
           <button 
             type="submit"  
-            className="btn" onClick= {this.onFormSubmit} >Submit Post </button>
+            className="submitTip" onClick= {this.onFormSubmit} >Submit Post </button>
         </form>
       </div>
     );

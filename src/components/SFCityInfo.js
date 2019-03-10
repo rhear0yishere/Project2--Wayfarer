@@ -8,7 +8,7 @@ class SFCityInfo extends Component {
       <div>
           <h1>{this.props.title}</h1>
           <p>{this.props.description}</p>
-          <img src = {this.props.imagePath} alt=''/>
+          <img class= "cityImage" src = {this.props.imagePath} alt=''/>
       </div>
     );
   }

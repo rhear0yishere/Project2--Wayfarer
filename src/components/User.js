@@ -6,11 +6,13 @@ class User extends Component {
 
 
   render() {
-    console.log(localStorage.title, "LOCAL")
+    console.log(this.props.LoggedIn, "LOCAL")
     return (
       <div>
-      <h1 className= "userTitle">Welcome {localStorage.title}</h1>
-      <UserPostContainer/>
+        {this.props.LoggedIn ? <h1 className= "userTitle">Welcome {localStorage.title}</h1> : ''}
+        {this.props.LoggedIn ? <UserPostContainer/> : ''}
+
+      
       </div>
     );
   }

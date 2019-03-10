@@ -8,7 +8,8 @@ class PostContainer extends Component {
   state = {
     tips: [],
     specificTip: [],
-    userSpecific: []
+    userSpecific: [],
+    LoggedIn: this.props.LoggedIn
   };
 
  componentWillReceiveProps(){
@@ -103,14 +104,14 @@ class PostContainer extends Component {
 
   render() {
 
-
     return (
       <div className="PostContainer">
-                 <NewPost createTip = {this.createTip}/>
 
-          <p>{this.props.title}</p>
+          <h2>{this.props.title}Tips</h2>
+          {this.state.LoggedIn ? <NewPost createTip = {this.createTip}/> : ''}
 
           <TipList 
+            LoggedIn= {this.state.LoggedIn}
             tips= {this.state.specificTip}
             tips2= {this.state.userSpecific}
             updateTip= {this.updateTip}

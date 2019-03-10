@@ -14,18 +14,20 @@ import { Menu, Segment, MenuItem } from 'semantic-ui-react'
             <Menu.Item as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
             
             <Menu.Menu position='right'>
-              <Menu.Item as={Link} to='/User'
+            <Menu.Item className= "navBackground" as={Link} to='/AllPosts'
+                  name='All Tips'
+              //   active={activeItem === 'SignIn'}
+                onClick={this.handleItemClick}
+              />
+              <Menu.Item  as={Link} to='/User'
+              className= "navBackground"
                 name='Profile'
               //   active={activeItem === 'SignIn'}
                 onClick={this.handleItemClick}
               />
                
-              <Menu.Item as={Link} to='/AllPosts'
-                name='Global'
-              //   active={activeItem === 'SignIn'}
-                onClick={this.handleItemClick}
-              />
-              <Menu.Item as={Link} to='/'
+              <Menu.Item clas={Link} to='/'
+              className= "navBackground"
                 name='Log Out'
               //   active={activeItem === 'SignIn'}
                 onClick={this.props.loggedOut}
@@ -40,20 +42,29 @@ import { Menu, Segment, MenuItem } from 'semantic-ui-react'
       return (
       
         <div className='nav-container'>
-           <Menu className='nav'>
+           <Menu>
             <Menu.Item as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
             
             <Menu.Menu position='right'>
+            <Menu.Item className= "navBackground" as={Link} to='/AllPosts'
+                  name='All Tips'
+              //   active={activeItem === 'SignIn'}
+                onClick={this.handleItemClick}
+              />
               <Menu.Item
+              className= "navBackground"
               //   active={activeItem === 'SignIn'}
                 onClick={this.handleItemClick}
               > <Link to="/login">Sign In</Link></Menu.Item>
-             
+   
               <Menu.Item as={Link} to='/signup'
+              
                 name='Sign Up'
               //   active={activeItem === 'SignUp'}
                 onClick={this.handleItemClick}
               />
+
+
               
             </Menu.Menu>
           </Menu> 
