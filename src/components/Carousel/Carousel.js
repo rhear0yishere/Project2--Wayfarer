@@ -25,7 +25,7 @@ class CityCarousel extends Component {
     const { index, direction } = this.state;
  
     return (
-      <Container fluid={true}>
+      <Container className= "carousel" fluid={true}>
         <Row noGutters={false}>
           <Col xs={12} md={12}>
             <Carousel
@@ -33,10 +33,10 @@ class CityCarousel extends Component {
               direction={direction}
               onSelect={this.handleSelect}
             >
-            <Carousel.Item> <img className="pic d-block w-100" src={img1} alt="First slide" />
-              <Carousel.Caption>
-                <div id="header">
-                  <h1>Japan</h1>
+            <Carousel.Item className= "carousel"> <img className="pic d-block w-100" src={img1} alt="First slide" />
+              <Carousel.Caption className= "carousel">
+                <div className= "carousel" id="header">
+                  <h1 >Japan</h1>
                   </div>
               </Carousel.Caption>
             </Carousel.Item>

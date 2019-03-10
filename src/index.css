@@ -12,7 +12,9 @@
 
 }
 
-
+ .carousel-caption{
+  display:none;
+}
 
 body {
   margin: 0;

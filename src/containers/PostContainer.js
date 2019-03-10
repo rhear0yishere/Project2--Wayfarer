@@ -9,7 +9,11 @@ class PostContainer extends Component {
     tips: [],
     specificTip: [],
     userSpecific: [],
-    LoggedIn: this.props.LoggedIn
+    LoggedIn: this.props.LoggedIn,
+    showUserTips: this.props.showUserTips,
+    showMainTips: this.props.showMainTips,
+    title: this.props.title
+
   };
 
  componentWillReceiveProps(){
@@ -107,10 +111,12 @@ class PostContainer extends Component {
     return (
       <div className="PostContainer">
 
-          <h2>{this.props.title}Tips</h2>
           {this.state.LoggedIn ? <NewPost createTip = {this.createTip}/> : ''}
 
           <TipList 
+            title= {this.props.title}
+            showUserTips= {this.state.showUserTips}
+            showMainTips={this.state.showMainTips}
             LoggedIn= {this.state.LoggedIn}
             tips= {this.state.specificTip}
             tips2= {this.state.userSpecific}
