@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import UserPosts from '../components/UserPosts'
 import PostContainer from '../containers/PostContainer'
 
 

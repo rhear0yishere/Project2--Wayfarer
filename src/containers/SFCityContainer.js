@@ -61,12 +61,9 @@ changeSanFran= () => {
         </ul>
       </div>
 
-
       <div className ="mainCity">
           <SFCityInfo title ={this.state.title} description= {this.state.description} imagePath={this.state.imagePath}/>
           <PostContainer showMainTips={this.state.showMainTips} title ={this.state.title} LoggedIn= {this.state.LoggedIn}/>       </div>
-
-
 
     </div>
     );

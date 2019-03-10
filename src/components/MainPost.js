@@ -53,7 +53,6 @@ executeOnClick(isExpanded) {
 
           {this.props.showUserTips ? <a className = "remove"
             href="#removeTip"
-            className='remove'
             onClick={this.deletingTip}
             >
               Remove

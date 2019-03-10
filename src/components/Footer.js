@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 
-import { Menu, Segment } from 'semantic-ui-react'
-
 
 
 

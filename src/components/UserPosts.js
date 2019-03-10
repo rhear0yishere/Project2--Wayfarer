@@ -18,7 +18,6 @@ deletingTip = (event) => {
           <span>{ this.props.tip.text }</span>
           <a className = "remove"
             href="#removeTip"
-            className='remove'
             onClick={this.deletingTip}
             >
               Remove

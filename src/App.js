@@ -1,26 +1,20 @@
 import React, { Component } from 'react';
-import MyRoutes from './config/routes';
+import { Switch, Route } from 'react-router-dom';
+import {Redirect} from 'react-router-dom'
 import 'semantic-ui-css/semantic.min.css';
+
+//components
+import MyRoutes from './config/routes';
 import Nav from './components/Nav';
 import Footer from './components/Footer'
 import LoginPage from './components/LoginPage';
-import { Switch, Route } from 'react-router-dom';
 import axios from 'axios';
-import {Redirect} from 'react-router-dom'
 import SignupPage from './components/SignupPage'
 import User from './components/User'
 import AllPosts from './components/AllPosts';
-import NewPost from './components/NewPost';
-
-
-
-/////
- 
-
 
 class App extends Component {
- 
- 
+  
   state = {
     email: '' ,
     password: '',
@@ -50,8 +44,8 @@ class App extends Component {
 
   signUp = (e) => {
     e.preventDefault()
-    // axios.post('https://still-journey-70148.herokuapp.com/user/signup', 
-    axios.post('http://localhost:3001/user/signup', 
+    axios.post('https://still-journey-70148.herokuapp.com/user/signup', 
+    // axios.post('http://localhost:3001/user/signup', 
 
 			{ email: this.state.email,
       	password: this.state.password }
@@ -81,8 +75,8 @@ logOut = () => {
 
   handleLogIn = (e) => {
     e.preventDefault()
-    // axios.post('https://still-journey-70148.herokuapp.com/user/login', {
-    axios.post('http://localhost:3001/user/login',{
+    axios.post('https://still-journey-70148.herokuapp.com/user/login', {
+    // axios.post('http://localhost:3001/user/login',{
       email: this.state.email,
       password: this.state.password
     })
@@ -145,8 +139,6 @@ logOut = () => {
               }}
             />
     
-          
-
          </Switch>
 
           <Footer/>   

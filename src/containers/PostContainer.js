@@ -73,7 +73,7 @@ class PostContainer extends Component {
 
         console.log(tip._id, 'tip object!!!!!!!!!!!!');
 
-        return tip._id != res.data._id
+        return tip._id !== res.data._id
       });
       console.log(res.data._id)
       this.setState({tips});
