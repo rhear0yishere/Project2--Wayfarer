@@ -49,9 +49,8 @@ code {
 }
 
 .nav  {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  background-color:red;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 
@@ -62,7 +61,18 @@ Menu.props.name {
 .Signup {
   width: 50%;
   margin: 0 auto;
+  
 }
+.Signup h1 {
+  margin-bottom: 35px;
+  text-align: center;
+
+}
+ .Menu .Modal  {
+  width:400px;
+  height:400px;
+}
+
 
 .Login {
   margin: 0 auto;
