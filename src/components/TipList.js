@@ -30,6 +30,7 @@ state ={
       return (
         <div>
           {this.state.showUserTips ? <MainPost 
+              showUserTips= {this.state.showUserTips}
                LoggedIn= {this.state.LoggedIn}
               key = {tip._id}
               tip = {tip}

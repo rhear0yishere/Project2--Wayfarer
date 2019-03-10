@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import EditPost from '../components/EditPost'
+import ShowMoreText from 'react-show-more-text';
+
 
 class MainPost extends Component {
 
@@ -15,18 +17,41 @@ executeOnClick(isExpanded) {
   render() {
     
     return (
-      
+
+    <div>
+
+
+
       <li  data-tips-index={ this.props.tip._id }>
       <div>
          <div className= "tipTitleDiv">
          <h4>Title</h4>
+
           <span className= "spanTip">{ this.props.tip.title }</span>
+
           </div>
-          <div className= "tipTextDiv">
+
           <h4>Tip</h4>
-          <span className= "spanTip">  { this.props.tip.text }</span>
-          </div>
-          {this.props.LoggedIn ? <a className = "remove"
+          
+          <ShowMoreText
+        
+                lines={3}
+                more='Show more'
+                less='Show less'
+                anchorClass=''
+                onClick={this.executeOnClick}
+            >
+            
+                <div className= "tipTextDiv">
+                <span className= "spanTip">  { this.props.tip.text }</span>
+                </div>           
+           </ShowMoreText>
+
+
+
+
+
+          {this.props.showUserTips ? <a className = "remove"
             href="#removeTip"
             className='remove'
             onClick={this.deletingTip}
@@ -37,7 +62,7 @@ executeOnClick(isExpanded) {
           
         </div >
         <div className="listTip">
-          {this.props.LoggedIn  ? <EditPost
+          {this.props.showUserTips  ? <EditPost
           tip= {this.props.tip}
           buttonName = "Edit Tip"
           updateTip = {this.props.updateTip}
@@ -48,6 +73,8 @@ executeOnClick(isExpanded) {
         
         
       </li>
+
+      </div>
 
       
     );
