@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Button, Checkbox, Form } from 'semantic-ui-react'
+
 // import { Button,} from 'react-bootstrap';
 
 
@@ -7,8 +8,9 @@ class SignUpPage extends Component {
   render () {
     return (
   <div>
-    <h1>Signup</h1>
+   
    <Form className='Signup'>
+   <h1>CREATE AN ACCOUNT</h1>
            <Form.Field>
             <label>Email</label>
              <input placeholder='Email' name= "email"onChange= {this.props.takeInput} />
