@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import SignupPage from './SignupPage';
 import 'semantic-ui-css/semantic.min.css';
 import LoginPage from './LoginPage';
+import '../index.css'
 
 
 
@@ -81,13 +82,13 @@ import LoginPage from './LoginPage';
       return (
       
         <div className='nav-container'>
-           <Menu className='nav'>
+           <Menu className='nav'  fixed='top' inverted className='nav'>
             <Menu.Item as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
             
             <Menu.Menu position='right'>
               <Menu.Item>
               <Modal  trigger={<Button>Sign In</Button>}>
-              <Modal.Header>Select a Photo</Modal.Header>
+              <Modal.Header></Modal.Header>
               <Modal.Content>
               <LoginPage takeInput={this.props.takeInput} handleLogIn={this.props.handleLogIn} />
               </Modal.Content>
@@ -96,7 +97,7 @@ import LoginPage from './LoginPage';
                 
               <Menu.Item >
               <Modal  trigger={<Button>Sign Up</Button>}>
-              <Modal.Header>Select a Photo</Modal.Header>
+              <Modal.Header></Modal.Header>
               <Modal.Content>
                 <SignupPage takeInput={this.props.takeInput} signUp={this.props.signUp}/>
               </Modal.Content>
