@@ -22,6 +22,7 @@ class App extends Component {
     password: '',
     LoggedIn: false,
     user: null,
+    title: ''
   }
 
   
@@ -56,9 +57,11 @@ class App extends Component {
       .then( response => {
         console.log(response)
         localStorage.token = response.data.signedJwt
+        localStorage.title = response.data.aUser.email
           this.setState({
             LoggedIn: true,
-            user: response.data.user
+            user: response.data.user,
+            title:localStorage.title
 
           })
       })
@@ -87,8 +90,10 @@ logOut = () => {
     .then( response => {
       console.log(response.data);
       localStorage.token = response.data.signedJwt
+      localStorage.title = response.data.user.email
       this.setState({
-        LoggedIn: true
+        LoggedIn: true,
+        title:localStorage.title
       })
     })
     .catch(err => console.log(err))
@@ -133,10 +138,10 @@ logOut = () => {
                 }
               }}
           /> */}
-          <Route path='/profile' exact
+          <Route path='/user' exact
               render={(props) => {
                 return (
-                  <LoginPage LoggedIn={this.state.LoggedIn} handleInput={this.takeInput} handleLogIn={this.handleLogIn} />
+                  <user LoggedIn={this.state.LoggedIn} title={this.state.title} />
                 )
               }}
           />
