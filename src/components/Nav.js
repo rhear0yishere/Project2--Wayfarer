@@ -40,19 +40,20 @@ import '../index.css'
     this.setState({modalIsOpen: false});
     
   }
-  
+  show = size => () => this.setState({ size, open: true })
+  close = () => this.setState({ open: false })
   
   
   
   
 
   render() {
-    
+    const { open, size } = this.state
     if(this.props.isLoggedIn){
       return (
       
         <div className='nav-container'>
-           <Menu width={8} fixed='top' inverted className='nav'>
+           <Menu className='nav' width={8} fixed='top'>
             <Menu.Item as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
             
             <Menu.Menu position='right'>
@@ -82,12 +83,12 @@ import '../index.css'
       return (
       
         <div className='nav-container'>
-           <Menu className='nav'  fixed='top' inverted className='nav'>
+           <Menu className='nav'  fixed='top'>
             <Menu.Item as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
             
             <Menu.Menu position='right'>
               <Menu.Item>
-              <Modal  trigger={<Button>Sign In</Button>}>
+              <Modal size={size} open={open} onClose={this.close} dimmer={{ className: 'my-dimmer' }}  trigger={<Button onClick={this.show('small')}>Small</Button>}>
               <Modal.Header></Modal.Header>
               <Modal.Content>
               <LoginPage takeInput={this.props.takeInput} handleLogIn={this.props.handleLogIn} />

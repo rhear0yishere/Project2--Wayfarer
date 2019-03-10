@@ -48,9 +48,10 @@ code {
   margin: 100px 20px;
 }
 
-.nav  {
+ Menu .nav  {
   padding-top: 10px;
   padding-bottom: 10px;
+  background-color:red;
 }
 
 
@@ -72,7 +73,8 @@ Menu.props.name {
   margin-bottom: 50px;
   text-align: center;
 }
- .Menu .Modal  {
+.ui.page.modals.transition.visible {
+  display: flex !important;
   width:400px;
   height:400px;
 }
