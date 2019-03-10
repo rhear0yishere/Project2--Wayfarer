@@ -12,6 +12,7 @@ import User from './components/User'
 import AllPosts from './components/AllPosts';
 import NewPost from './components/NewPost';
 
+/////
  
 
 
@@ -47,8 +48,8 @@ class App extends Component {
 
   signUp = (e) => {
     e.preventDefault()
-    // axios.post('https://still-journey-70148.herokuapp.com/user/signup', 
-    axios.post('http://localhost:3001/user/signup', 
+    axios.post('https://still-journey-70148.herokuapp.com/user/signup', 
+    // axios.post('http://localhost:3001/user/signup', 
 
 			{ email: this.state.email,
       	password: this.state.password }
@@ -78,8 +79,8 @@ logOut = () => {
 
   handleLogIn = (e) => {
     e.preventDefault()
-    // axios.post('https://still-journey-70148.herokuapp.com/user/login', {
-    axios.post('http://localhost:3001/user/login',{
+    axios.post('https://still-journey-70148.herokuapp.com/user/login', {
+    // axios.post('http://localhost:3001/user/login',{
       email: this.state.email,
       password: this.state.password
     })
