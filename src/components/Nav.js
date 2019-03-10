@@ -136,18 +136,18 @@ import '../index.css'
             <Menu.Item  as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
             
             <Menu.Menu position='right'>
-              <Menu.Item as={Link} to='/User'
+              <Menu.Item className= "navBackground" as={Link} to='/User'
                 name='Profile'
               //   active={activeItem === 'SignIn'}
                 onClick={this.handleItemClick}
               />
-                <Menu.Item as={Link} to='/AllPosts'
+                <Menu.Item className= "navBackground" as={Link} to='/AllPosts'
                 name='Global'
               //   active={activeItem === 'SignIn'}
                 onClick={this.handleItemClick}
               />
         
-              <Menu.Item as={Link} to='/'
+              <Menu.Item className= "navBackground" as={Link} to='/'
                 name='Log Out'
               //   active={activeItem === 'SignIn'}
                 onClick={this.props.loggedOut}
@@ -163,17 +163,18 @@ import '../index.css'
       
         <div className='nav-container'>
            <Menu className='nav'  fixed='top' >
-            <Menu.Item as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
+            <Menu.Item className= "navBackground" as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
             
             <Menu.Menu position='right'>
 
-            <Menu.Item as={Link} to='/AllPosts'
+            <Menu.Item className= "navBackground" as={Link} to='/AllPosts'
                 name='Global'
               //   active={activeItem === 'SignIn'}
                 onClick={this.handleItemClick}
               />
-              <Menu.Item>
-              <Modal  trigger={<Button>Sign In</Button>}>
+              <Menu.Item className= "navBackground">
+                
+              <Modal   trigger={<Button className= "navBackground">Sign In</Button>}>
               <Modal.Header></Modal.Header>
               <Modal.Content>
               <LoginPage takeInput={this.props.takeInput} handleLogIn={this.props.handleLogIn} />
@@ -181,8 +182,8 @@ import '../index.css'
               </Modal>
               </Menu.Item>
                 
-              <Menu.Item >
-              <Modal  trigger={<Button>Sign Up</Button>}>
+              <Menu.Item className= "navBackground" >
+              <Modal  trigger={<Button className= "navBackground">Sign Up</Button>}>
               <Modal.Header></Modal.Header>
               <Modal.Content>
                 <SignupPage takeInput={this.props.takeInput} signUp={this.props.signUp}/>
