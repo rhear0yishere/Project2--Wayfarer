@@ -6,9 +6,10 @@ class LoginPage extends Component {
   render () {
     return (
   <div>
-      <h1>Login</h1>
+      
     
       <Form className='Login'>
+      <h1>SIGN IN</h1>
       <Form.Field>
         <label>Username</label>
         <input placeholder='Username' name="email" onChange={this.props.takeInput} />

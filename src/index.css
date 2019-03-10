@@ -64,9 +64,13 @@ Menu.props.name {
   
 }
 .Signup h1 {
-  margin-bottom: 35px;
+  margin-bottom: 50px;
   text-align: center;
 
+}
+.Login h1 {
+  margin-bottom: 50px;
+  text-align: center;
 }
  .Menu .Modal  {
   width:400px;
