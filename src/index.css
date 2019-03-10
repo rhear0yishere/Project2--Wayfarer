@@ -33,12 +33,13 @@ h4{
 .postContainer{
   justify-content: center;
 }
-
+/* 
 .tipTextDiv{
   height: 70px;
-  overflow: auto;
+  overflow: hidden;
+  text-overflow: ellipsis;
   
-}
+} */
 
 .listTip{
   margin-bottom: 30px;

@@ -6,7 +6,10 @@ class MainPost extends Component {
 deletingTip = (event) => {
   event.preventDefault();
   this.props.deleteTip(this.props.tip);
-  
+}
+
+executeOnClick(isExpanded) {
+  console.log(isExpanded);
 }
 
   render() {
