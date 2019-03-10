@@ -5,6 +5,7 @@ class EditPost extends Component {
     tip: {
       tipId: this.props.tip._id,
       text: this.props.tip.text,
+      title: this.props.tip.title
     }
   }
 
@@ -12,7 +13,8 @@ class EditPost extends Component {
     this.setState({
       tip: {
         tipId: this.props.tip._id,
-        text: event.target.value
+        text: event.target.value,
+        title:event.target.value
       }
     });
   }
@@ -25,6 +27,7 @@ class EditPost extends Component {
     this.setState({ 
       tip: {
         tipId: this.props.tip._id,
+        title: " ",
         text: " "
       } 
     });

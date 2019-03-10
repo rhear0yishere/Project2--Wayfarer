@@ -25,6 +25,7 @@ class CityCarousel extends Component {
     const { index, direction } = this.state;
  
     return (
+
       <Container className= "carousel" fluid={true}>
         <Row noGutters={false}>
           <Col xs={12} md={12}>
@@ -72,6 +73,7 @@ class CityCarousel extends Component {
         </Row>
 
       </Container>
+
     );
   }
  }

@@ -5,7 +5,8 @@ import CityCarousel from './Carousel/Carousel'
 class Landing extends Component {
   render() {
     return (
-      <div>
+      <div className="Welcome">
+        <h1 className="Welcome">Welcome To Wayfarer</h1>
         <CityCarousel/>
         <About/>
       </div>

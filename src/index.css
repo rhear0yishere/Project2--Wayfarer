@@ -12,8 +12,36 @@
 
 }
 
+.Welcome{
+  text-align: center;
+}
+
  .carousel-caption{
-  display:none;
+  display:none !important;
+}
+
+ol{
+  background-color:transparent;
+}
+
+h4{
+  margin-top :0px;
+  margin-bottom:0px !important;
+  
+}
+
+.postContainer{
+  justify-content: center;
+}
+
+.tipTextDiv{
+  height: 70px;
+  overflow: auto;
+  
+}
+
+.listTip{
+  margin-bottom: 30px;
 }
 
 body {

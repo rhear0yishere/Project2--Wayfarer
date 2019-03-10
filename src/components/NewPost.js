@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 class NewPost extends Component {
   state = {
+    title: '',
     message: '',
     city: '',
     author: ''
@@ -29,10 +30,12 @@ class NewPost extends Component {
   onFormSubmit = (event) => {
     event.preventDefault();
     let message= this.state.message;
+    let title = this.state.title;
     let city= this.state.city
     let author = localStorage.title
-    this.props.createTip(message,city,author)
+    this.props.createTip(title,message,city,author)
     this.setState({
+      title:'',
       message: '',
       city: '',
       author: ''

@@ -12,8 +12,6 @@ class PostContainer extends Component {
     LoggedIn: this.props.LoggedIn,
     showUserTips: this.props.showUserTips,
     showMainTips: this.props.showMainTips,
-    title: this.props.title
-
   };
 
  componentWillReceiveProps(){
@@ -82,8 +80,9 @@ class PostContainer extends Component {
     })
   }
 
-  createTip = (message, city,author) => {
+  createTip = (title,message, city,author) => {
     let newPost = {
+      title: title,
       text: message,
       city: city,
       author: author

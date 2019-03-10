@@ -5,7 +5,8 @@ class TipList extends Component {
 state ={
   LoggedIn: this.props.LoggedIn,
   showUserTips: this.props.showUserTips,
-  showMainTips:this.props.showMainTips
+  showMainTips:this.props.showMainTips,
+  title: this.props.title
 }
   render() {
     let tips = this.props.tips.map ((tip) => {
@@ -13,6 +14,7 @@ state ={
       <div>
 
           {this.state.showMainTips ? <MainPost 
+              title= {this.state.title}
                LoggedIn= {this.state.LoggedIn}
               key = {tip._id}
               tip = {tip}
