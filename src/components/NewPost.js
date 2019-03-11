@@ -81,7 +81,7 @@ class NewPost extends Component {
           />
           <button 
             type="submit"  
-            className="submitTip" onClick= {this.onFormSubmit} >Submit Post </button>
+            className="submitTip" onClick= {this.onFormSubmit} >Submit</button>
         </form>
       </div>
     );

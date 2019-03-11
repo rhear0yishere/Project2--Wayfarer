@@ -6,7 +6,7 @@ class Landing extends Component {
   render() {
     return (
       <div className="Welcome">
-        <h1 className="Welcome">Welcome To Wayfarer</h1>
+        <h1 className="Welcome">Welcome To Wanderlust</h1>
         <CityCarousel/>
         <About/>
       </div>
