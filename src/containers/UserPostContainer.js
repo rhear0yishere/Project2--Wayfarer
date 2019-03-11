@@ -11,7 +11,8 @@ class UserPostContainer extends Component {
 
   render() {
     return (
-      <div>
+      <div className="userPostContainer">
+         {this.state.showUserTips ? <h1 className= "userTitle">Welcome {localStorage.title}</h1> : ''}
         <PostContainer showUserTips= {this.state.showUserTips}/>
       </div>
     );
