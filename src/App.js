@@ -271,7 +271,7 @@ logOut = () => {
            render = {(props) => {
              if(this.state.LoggedIn){
                return (
-                <Redirect to="/User"/>
+                <Redirect to="/AllPosts"/>
                )
              } else {
               return(
@@ -282,7 +282,7 @@ logOut = () => {
              }}
            />
 
-          <Route path='/User' exact
+          <Route path='/User'
               render={(props) => {
                 return (
                   <User LoggedIn={this.state.LoggedIn} title={this.state.title} />
@@ -291,7 +291,7 @@ logOut = () => {
           />
 
               <Route
-              path='/AllPosts' exact
+              path='/AllPosts' 
               render={(props) => {
                 return (
                   <AllPosts LoggedIn={this.state.LoggedIn} />
