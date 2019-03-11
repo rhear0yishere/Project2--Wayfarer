@@ -53,7 +53,7 @@ import '../index.css'
       
         <div className='nav-container'>
            <Menu width={8} fixed='top' >
-            <Menu.Item  as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
+            <Menu.Item  as={Link} to='/' name='Wanderlust'  onClick={this.handleItemClick} />
             
             <Menu.Menu position='right'>
               <Menu.Item className= "navBackground" as={Link} to='/User'
@@ -83,7 +83,7 @@ import '../index.css'
       
         <div className='nav-container'>
            <Menu className='nav'  fixed='top' >
-            <Menu.Item className= "navBackground" as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
+            <Menu.Item className= "navBackground" as={Link} to='/' name='Wanderlust'  onClick={this.handleItemClick} />
             
             <Menu.Menu position='right'>
 

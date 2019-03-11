@@ -7,7 +7,7 @@ import SFCityContainer from '../containers/SFCityContainer';
 
 export default (
     <Switch>
-      <Route exact path='/' component={ Landing } />
+      {/* <Route exact path='/' component={ Landing } /> */}
       {/* <Route path='/AllPosts' component={ AllPosts } /> */}
       <Route path='/SF' component={ SFCityContainer } />
       
