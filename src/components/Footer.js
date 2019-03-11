@@ -15,7 +15,7 @@ import React, { Component } from 'react';
 
     return (
      <div className='footer'>
-        <h3>WAYFARER LCC ALL RIGHTS RESERVED</h3>
+        <h3>WANDERLUST LCC ALL RIGHTS RESERVED</h3>
      
      </div>
     )
