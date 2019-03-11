@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import SFCityContainer from '../containers/SFCityContainer'
-import { Link } from 'react-router-dom';
 
 class AllPosts extends Component {
+  state ={
+    LoggedIn: this.props.LoggedIn
+  }
   render() {
+    console.log(this.state.LoggedIn, "LOOK")
     return (
       <div>
-      <li><Link to={'/NewPost'}>New Post</Link></li>
-      <SFCityContainer />
+      <SFCityContainer LoggedIn= {this.state.LoggedIn} />
       </div>
     );
   }

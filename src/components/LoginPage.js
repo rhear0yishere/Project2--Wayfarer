@@ -9,8 +9,9 @@ class LoginPage extends Component {
       
     
       <Form className='Login'>
-      <h1>SIGN IN</h1>
+      
       <Form.Field>
+      <h1>SIGN IN</h1>
         <label>Username</label>
         <input placeholder='Username' name="email" onChange={this.props.takeInput} />
       </Form.Field>
@@ -21,7 +22,7 @@ class LoginPage extends Component {
       <Form.Field>
         <Checkbox label='I agree to the Terms and Conditions' />
       </Form.Field>
-      <Button type='submit' onClick={this.props.handleLogIn}>Sign In</Button>
+      <Button color='green' fluid type='submit' onClick={this.props.handleLogIn}>Sign In</Button>
     </Form>
     </div>
     )
