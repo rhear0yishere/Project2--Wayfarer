@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Menu, Modal,Button } from 'semantic-ui-react'
-import ReactDOM from 'react-dom';
 import SignupPage from './SignupPage';
 import 'semantic-ui-css/semantic.min.css';
 import LoginPage from './LoginPage';

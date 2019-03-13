@@ -7,11 +7,11 @@ class UserPostContainer extends Component {
     showUserTips: true
   }
 
-
-
   render() {
     return (
       <div>
+        {this.state.showUserTips ? <h1 className= "userTitle">Welcome {localStorage.title}</h1> : ''}
+
         <PostContainer showUserTips= {this.state.showUserTips}/>
       </div>
     );

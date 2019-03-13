@@ -9,7 +9,7 @@ class User extends Component {
     console.log(this.props.LoggedIn, "LOCAL")
     return (
       <div>
-        {this.props.LoggedIn ? <h1 className= "userTitle">Welcome {localStorage.title}</h1> : ''}
+        {/* {this.props.LoggedIn ? <h1 className= "userTitle">Welcome {localStorage.title}</h1> : ''} */}
         {this.props.LoggedIn ? <UserPostContainer/> : ''}
 
       

@@ -51,7 +51,8 @@ state ={
       <ul className= "allTips">
         {tips}
       </ul>
-      {this.state.showUserTips ? <h1 className= "userTitle">Welcome {localStorage.title}</h1> : ''}
+
+      {/* {this.state.showUserTips ? <h1 className= "userTitle">Welcome {localStorage.title}</h1> : ''} */}
       {this.state.showUserTips ? <h1>My Tips</h1> : ''}
 
       <ul className= "specificUser">
@@ -63,3 +64,4 @@ state ={
 }
 
 export default TipList;
+ 
