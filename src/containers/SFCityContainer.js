@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import SFCityInfo from '../components/SFCityInfo'
 import PostContainer from './PostContainer'
 import TipModel from '../models/tips'
+import { Button } from 'semantic-ui-react'
+
 
 class SFCityContainer extends Component {
 
@@ -54,9 +56,9 @@ changeSanFran= () => {
     <div className= "citiesList">
     <h2 className="citiesTitle">Cities</h2>
         <ul className="citiesButtons">
-          <button className={"button"} onClick={this.changeSeattle}>Seattle</button>
-          <button className={"button"} onClick={this.changeLondon}>London</button>
-          <button className={"button"} onClick={this.changeSanFran}>San Francisco</button>
+          <Button size='huge' className={"button"} onClick={this.changeSeattle}>Seattle</Button>
+          <Button size='huge' className={"button"} onClick={this.changeLondon}>London</Button>
+          <Button size='huge' className={"button"} onClick={this.changeSanFran}>San Francisco</Button>
           
         </ul>
       </div>

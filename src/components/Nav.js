@@ -7,12 +7,6 @@ import 'semantic-ui-css/semantic.min.css';
 import LoginPage from './LoginPage';
 import '../index.css'
 
-
-
-
-
-
-
  class Nav extends Component {
   
   constructor() {
@@ -41,11 +35,6 @@ import '../index.css'
     
   }
   
-  
-  
-  
-  
-
   render() {
     
     if(this.props.isLoggedIn){
@@ -56,16 +45,18 @@ import '../index.css'
             <Menu.Item  as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
             
             <Menu.Menu position='right'>
+            <Menu.Item className= "navBackground" as={Link} to='/AllPosts'
+                name='All Tips'
+              //   active={activeItem === 'SignIn'}
+                onClick={this.handleItemClick}
+              />
+              
               <Menu.Item className= "navBackground" as={Link} to='/User'
                 name='Profile'
               //   active={activeItem === 'SignIn'}
                 onClick={this.handleItemClick}
               />
-                <Menu.Item className= "navBackground" as={Link} to='/AllPosts'
-                name='Global'
-              //   active={activeItem === 'SignIn'}
-                onClick={this.handleItemClick}
-              />
+    
         
               <Menu.Item className= "navBackground" as={Link} to='/'
                 name='Log Out'
@@ -88,7 +79,7 @@ import '../index.css'
             <Menu.Menu position='right'>
 
             <Menu.Item className= "navBackground" as={Link} to='/AllPosts'
-                name='Global'
+                name='All Tips'
               //   active={activeItem === 'SignIn'}
                 onClick={this.handleItemClick}
               />

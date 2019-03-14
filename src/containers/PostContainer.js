@@ -110,7 +110,7 @@ class PostContainer extends Component {
     return (
       <div className="PostContainer">
 
-          {this.state.LoggedIn ? <NewPost createTip = {this.createTip}/> : ''}
+           <NewPost createTip = {this.createTip}/> 
 
           <TipList 
             title= {this.props.title}

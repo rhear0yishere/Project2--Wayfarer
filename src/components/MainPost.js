@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import EditPost from '../components/EditPost'
 import ShowMoreText from 'react-show-more-text';
+import { Container,Button } from 'semantic-ui-react'
+
 
 
 class MainPost extends Component {
@@ -18,13 +20,11 @@ executeOnClick(isExpanded) {
     
     return (
 
-    <div>
-
-
+    <Container fluid className="tipDiv">
 
       <li  data-tips-index={ this.props.tip._id }>
-      <div>
-         <div className= "tipTitleDiv">
+      <div >
+         <div >
          <h4>Title</h4>
 
           <span className= "spanTip">{ this.props.tip.title }</span>
@@ -33,17 +33,17 @@ executeOnClick(isExpanded) {
 
           <h4>Tip</h4>
           
-          <ShowMoreText
+          <ShowMoreText 
         
-                lines={3}
-                more='Show more'
-                less='Show less'
+                lines={2}
+                more='Read More'
+                less='Read Less'
                 anchorClass=''
                 onClick={this.executeOnClick}
             >
             
-                <div className= "tipTextDiv">
-                <span className= "spanTip">  { this.props.tip.text }</span>
+                <div>
+                <span  className= "spanTip">  { this.props.tip.text }</span>
                 </div>           
            </ShowMoreText>
 
@@ -73,7 +73,7 @@ executeOnClick(isExpanded) {
         
       </li>
 
-      </div>
+      </Container>
 
       
     );

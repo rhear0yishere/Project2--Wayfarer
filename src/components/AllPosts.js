@@ -6,7 +6,6 @@ class AllPosts extends Component {
     LoggedIn: this.props.LoggedIn
   }
   render() {
-    console.log(this.state.LoggedIn, "LOOK")
     return (
       <div>
       <SFCityContainer LoggedIn= {this.state.LoggedIn} />

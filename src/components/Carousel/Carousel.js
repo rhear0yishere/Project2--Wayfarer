@@ -25,8 +25,10 @@ class CityCarousel extends Component {
     const { index, direction } = this.state;
  
     return (
+     
 
       <Container className= "carousel" fluid={true}>
+       <h1 className="welcomeWayfarer">Welcome To Wayfarer</h1>
         <Row noGutters={false}>
           <Col xs={12} md={12}>
             <Carousel

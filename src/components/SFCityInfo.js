@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
+import { Image } from 'semantic-ui-react'
+
+
 
 class SFCityInfo extends Component {
+  
 
   render() {
 
@@ -8,7 +12,7 @@ class SFCityInfo extends Component {
       <div>
           <h1>{this.props.title}</h1>
           <p>{this.props.description}</p>
-          <img className= "cityImage" src = {this.props.imagePath} alt=''/>
+          <Image rounded centered className= "cityImage" src = {this.props.imagePath} alt=''/>
       </div>
     );
   }

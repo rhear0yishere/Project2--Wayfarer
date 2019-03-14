@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
+import {Form } from 'semantic-ui-react'
+
 
 class EditPost extends Component {
   state = {
     tip: {
       tipId: this.props.tip._id,
       text: this.props.tip.text,
-      title: this.props.tip.title
+      title: this.props.tip.title,
+  
     }
   }
 
@@ -14,7 +17,9 @@ class EditPost extends Component {
       tip: {
         tipId: this.props.tip._id,
         text: event.target.value,
-        title:event.target.value
+        title:event.target.value,
+        
+        
       }
     });
   }
@@ -28,7 +33,8 @@ class EditPost extends Component {
       tip: {
         tipId: this.props.tip._id,
         title: " ",
-        text: " "
+        text: " ",
+        author:" "
       } 
     });
   }
@@ -37,7 +43,7 @@ class EditPost extends Component {
     return (
       <div>
         <div className="updateTipForm">
-          <form  onSubmit={ this.onSubmit }>
+          <Form  onSubmit={ this.onSubmit }>
             <input 
             className="updateTipFormInput"
               type="text"
@@ -45,7 +51,7 @@ class EditPost extends Component {
               placeholder="update this tip here"
               value={(this.state && this.state.tip.text) || ''} />
             <button className= "save" type="submit">Save</button>
-          </form>
+          </Form>
         </div>
       </div>
     );

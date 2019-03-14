@@ -1,6 +1,34 @@
 import React, { Component } from 'react';
+import { Modal,Button,Form } from 'semantic-ui-react'
 
 class NewPost extends Component {
+  constructor() {
+    super();
+
+    this.state = {
+      modalIsOpen: false
+    };
+
+    this.openModal = this.openModal.bind(this);
+    this.afterOpenModal = this.afterOpenModal.bind(this);
+    this.closeModal = this.closeModal.bind(this);
+  }
+
+  openModal() {
+    this.setState({modalIsOpen: true});
+  }
+
+  afterOpenModal() {
+    // references are now sync'd and can be accessed.
+    this.subtitle.style.color = '#f00';
+  }
+
+  closeModal() {
+    this.setState({modalIsOpen: false});
+    
+  }
+  
+  
   state = {
     title: '',
     message: '',
@@ -47,8 +75,11 @@ class NewPost extends Component {
 
     return (
       <div >
-        <h1>Post A Tip</h1>
-        <form className="postForm" >
+        <Modal    trigger={<Button className="tipModal">Add New Tip</Button>}>
+              <Modal.Header></Modal.Header>
+              <Modal.Content >
+              <h1>Add A Tip</h1>
+        <Form className="postForm" >
         <input
          className= "postCity"
          value={ this.state.city}
@@ -79,10 +110,13 @@ class NewPost extends Component {
             placeholder="Post message"
             type="text"
           />
-          <button 
+          <Button
             type="submit"  
-            className="submitTip" onClick= {this.onFormSubmit} >Submit Post </button>
-        </form>
+            className="submitTip" onClick= {this.onFormSubmit} >Submit Tip </Button>
+        </Form>
+              </Modal.Content>
+              </Modal>
+       
       </div>
     );
   }

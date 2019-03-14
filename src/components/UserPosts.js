@@ -14,7 +14,7 @@ deletingTip = (event) => {
     return (
       
       <li className="listTip" data-tips-index={ this.props.tip._id }>
-      <div>
+      <div className="remove">
           <span>{ this.props.tip.text }</span>
           <a className = "remove"
             href="#removeTip"
@@ -28,7 +28,6 @@ deletingTip = (event) => {
           tip= {this.props.tip}
           buttonName = "Edit Tip"
           updateTip = {this.props.updateTip}
-        
         />
         
       </li>

@@ -1,19 +1,26 @@
 import React, { Component } from 'react';
 import MainPost from '../components/MainPost'
+import { Icon } from 'semantic-ui-react'
+
 
 class TipList extends Component {
 state ={
   LoggedIn: this.props.LoggedIn,
   showUserTips: this.props.showUserTips,
   showMainTips:this.props.showMainTips,
-  title: this.props.title
+  title: this.props.title,
+
 }
   render() {
     let tips = this.props.tips.map ((tip) => {
     return (
-      <div>
-
+      <div className= "allTipsDiv">
+      
+      <div className="smallIcon">
+      <Icon  size='mini' circular color='teal' name='user' />
+      </div>
           {this.state.showMainTips ? <MainPost 
+            
               title= {this.state.title}
                LoggedIn= {this.state.LoggedIn}
               key = {tip._id}
@@ -28,7 +35,7 @@ state ={
 
     let tips2 = this.props.tips2.map ((tip) => {
       return (
-        <div>
+        <div className= "allTipsDiv">
           {this.state.showUserTips ? <MainPost 
               showUserTips= {this.state.showUserTips}
                LoggedIn= {this.state.LoggedIn}
@@ -48,14 +55,14 @@ state ={
       {this.state.showMainTips ?  <h1>{this.props.title} Tips</h1> : ''}
 
      
-      <ul className= "allTips">
+      {this.state.showMainTips ?   <ul className= "allTips">
         {tips}
-      </ul>
+      </ul>: ''}
 
       {this.state.showUserTips ? <h1>My Tips</h1> : ''}
-      <ul className= "specificUser">
+      {this.state.showUserTips ?<ul className= "specificUser">
         {tips2}
-      </ul>
+      </ul> : ''}
     </div>
     )
   }

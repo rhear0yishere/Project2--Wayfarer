@@ -1,15 +1,43 @@
 
 *{
-  background-color: #F4FBFF;
+  background-color:whitesmoke;
+}
+
+.tipModal{
+  margin:20px!important;
+  width: 30%!important;
+ 
+}
+
+h1, h2, button{
+  font-family: 'Cairo', sans-serif !important;
+}
+
+span{
+  font-size:15px;
+
+}
+
+
+.welcomeWayfarer{
+  font-size:70px;
 }
 
 .navBackground{
   background-color: white !important;
 }
 
-.button:focus{
-  outline:none;
+.remove{
+  color: red!important;
+  font-size: 15px!important;
 
+}
+
+
+.button{
+  margin:10px !important;
+  background-color:black!important;
+  color:white!important;
 }
 
 .Welcome{
@@ -27,7 +55,6 @@ ol{
 h4{
   margin-top :0px;
   margin-bottom:0px !important;
-  
 }
 
 .postContainer{
@@ -108,6 +135,7 @@ code {
   width:70%;
   /* border: 1px solid black; */
   justify-content: center
+
  
 }
 
@@ -121,6 +149,20 @@ code {
   text-align:center;
   margin-bottom: 1em;
   
+}
+
+h1, h4{
+  text-align: center;
+  justify-content: center;
+}
+.profileDiv{
+  text-align: center;
+  justify-content: center;
+
+}
+i{
+  font-size:60px!important;
+  margin-top:50px!important;
 }
 .about {
   margin: 100px 20px;
@@ -144,6 +186,14 @@ Menu.props.name {
   margin: 0 auto;
   width:50%;
 }
+
+.smallIcon i{
+  font-size:30px!important;
+}
+/* .smallIcon{
+  display: flex;
+  align-self: flex-end;
+} */
 
 .updateTipFormInput{
   width:300px;
@@ -193,6 +243,20 @@ Menu.props.name {
 
 }
 
+
+.allTipsDiv{
+  border:2px solid black !important;
+  margin:10px;
+  font-size:15px;
+  justify-content: center;
+  text-align:center;
+}
+
+.allTipsDiv a{
+  color:black;
+  font-size:15px;
+  font-weight: bold;
+}
 input, textarea{
   background-color: white;
 }
@@ -213,13 +277,16 @@ li{
   list-style-type: none;
 }
 
-.specificUser{
+.userIcon{
+  justify-content: center;
+  text-align: center;
+}
+
+.allTips,.specificUser{
   display: flex;
   flex-direction: column-reverse;
 }
-.remove {
-  margin-left: 250px;
-}
+
 .save{
   margin-left:20px;
 }
