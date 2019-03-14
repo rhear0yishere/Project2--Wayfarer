@@ -5,7 +5,7 @@ import { Icon } from 'semantic-ui-react'
 
 
 class UserPostContainer extends Component {
-  state ={
+  state = {
     showUserTips: true
   }
 
@@ -13,10 +13,10 @@ class UserPostContainer extends Component {
 
   render() {
     return (
-      <div className ="userIcon">
-      <Icon circular color='teal' name='user' />
-      {this.state.showUserTips ? <h1 className= "userTitle">Welcome {localStorage.title}</h1> : ''}
-        <PostContainer showUserTips= {this.state.showUserTips}/>
+      <div className = "userIcon">
+      <Icon circular color = 'teal' name = 'user' />
+      {this.state.showUserTips ? <h1 className = "userTitle">Welcome {localStorage.title}</h1> : ''}
+        <PostContainer showUserTips = {this.state.showUserTips}/>
       </div>
     );
   }

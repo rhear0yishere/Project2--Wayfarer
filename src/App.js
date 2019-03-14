@@ -38,14 +38,12 @@ class App extends Component {
   signUp = (e) => {
     e.preventDefault()
     axios.post('https://still-journey-70148.herokuapp.com/user/signup', 
-        // axios.post('http://localhost:3001/user/signup', 
 
 
 			{ email: this.state.email,
       	password: this.state.password }
 			)
       .then( response => {
-        console.log(response)
         localStorage.token = response.data.signedJwt
         localStorage.title = response.data.aUser.email
           this.setState({
@@ -68,16 +66,13 @@ logOut = () => {
 }
 
   handleLogIn = (e) => {
-    console.log('loggggggg')
     e.preventDefault()
     axios.post('https://still-journey-70148.herokuapp.com/user/login', {
-          // axios.post('http://localhost:3001/user/login',{
 
       email: this.state.email,
       password: this.state.password
     })
     .then( response => {
-      console.log(response.data);
       localStorage.token = response.data.signedJwt
       localStorage.title = response.data.user.email
       this.setState({
@@ -91,30 +86,21 @@ logOut = () => {
     return (
       <div >
            <Nav 
-            isLoggedIn={this.state.LoggedIn}
-            loggedOut={this.logOut} 
-            takeInput={this.takeInput} 
-            handleLogIn={this.handleLogIn} 
-            signUp={this.signUp}
+            isLoggedIn = {this.state.LoggedIn}
+            loggedOut = {this.logOut} 
+            takeInput = {this.takeInput} 
+            handleLogIn = {this.handleLogIn} 
+            signUp = {this.signUp}
           />
 
-         { MyRoutes }  
+         { MyRoutes }
+
          <Switch>
 
-           
-           {/* <Route path = '/' exact
-           render = {(props) => {
-               return (
-                <Redirect to="/User"/>
-               )
-              
-             }}
-           /> */}
-
-          <Route path='/User' exact
-              render={(props) => {
+          <Route path = '/User' exact
+              render = {(props) => {
                 return (
-                  <User LoggedIn={this.state.LoggedIn} title={this.state.title} />
+                  <User LoggedIn = {this.state.LoggedIn} title = {this.state.title} />
                 )
               }}
           />
@@ -123,12 +109,12 @@ logOut = () => {
               path='/AllPosts' exact
               render={(props) => {
                 return (
-                  <AllPosts LoggedIn={this.state.LoggedIn} />
+                  <AllPosts LoggedIn = {this.state.LoggedIn} />
                 )
               }}
             />    
 
-          
+    
          </Switch>
 
           <Footer/>   

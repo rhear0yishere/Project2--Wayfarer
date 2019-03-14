@@ -31,8 +31,8 @@ class PostContainer extends Component {
         tips: res.data.tips
       })
       
-      let specificTip =[];
-      for(let i=0; i<this.state.tips.length;i++){
+      let specificTip = [];
+      for(let i = 0; i < this.state.tips.length; i++){
         if (this.props.title === this.state.tips[i].city){
           specificTip.push(this.state.tips[i])
           this.setState({
@@ -40,7 +40,6 @@ class PostContainer extends Component {
           })
           }
       }
-
     })
 
   }
@@ -53,8 +52,8 @@ class PostContainer extends Component {
         tips: res.data.tips
       })
       
-      let userSpecific =[];
-      for(let i=0; i<this.state.tips.length;i++){
+      let userSpecific = [];
+      for(let i = 0; i < this.state.tips.length; i++){
         if (localStorage.title === this.state.tips[i].author){
           userSpecific.push(this.state.tips[i])
           this.setState({
@@ -62,20 +61,15 @@ class PostContainer extends Component {
           })
           }
       }
-
     })
 
   }
 
   deleteTip = (id) => {
-    TipModel.delete(id).then((res)=>{
+    TipModel.delete(id).then((res) => {
       let tips = this.state.specificTip.filter(function(tip){
-
-        console.log(tip._id, 'tip object!!!!!!!!!!!!');
-
         return tip._id !== res.data._id
       });
-      console.log(res.data._id)
       this.setState({tips});
     })
   }
@@ -113,14 +107,14 @@ class PostContainer extends Component {
            <NewPost createTip = {this.createTip}/> 
 
           <TipList 
-            title= {this.props.title}
-            showUserTips= {this.state.showUserTips}
-            showMainTips={this.state.showMainTips}
-            LoggedIn= {this.state.LoggedIn}
-            tips= {this.state.specificTip}
-            tips2= {this.state.userSpecific}
-            updateTip= {this.updateTip}
-            deleteTip= {this.deleteTip} 
+            title = {this.props.title}
+            showUserTips = {this.state.showUserTips}
+            showMainTips = {this.state.showMainTips}
+            LoggedIn = {this.state.LoggedIn}
+            tips = {this.state.specificTip}
+            tips2 = {this.state.userSpecific}
+            updateTip = {this.updateTip}
+            deleteTip = {this.deleteTip} 
             />
       </div>
     );

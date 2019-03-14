@@ -8,19 +8,16 @@ class LoginPage extends Component {
   <div>
       <h1>Login</h1>
     
-      <Form className='Login'>
-      <Form.Field>
-        <label>Username</label>
-        <input placeholder='Username' name="email" onChange={this.props.takeInput} />
-      </Form.Field>
-      <Form.Field>
-        <label>Password</label>
-        <input placeholder='Password' name="password" onChange={this.props.takeInput} />
-      </Form.Field>
-      <Form.Field>
-        <Checkbox label='I agree to the Terms and Conditions' />
-      </Form.Field>
-      <Button type='submit' onClick={this.props.handleLogIn}>Sign In</Button>
+      <Form className = 'Login'>
+        <Form.Field>
+           <label>Username</label>
+            <input placeholder = 'Username' name = "email" onChange = {this.props.takeInput} />
+        </Form.Field>
+        <Form.Field>
+           <label>Password</label>
+           <input placeholder = 'Password' name = "password" onChange = {this.props.takeInput} />
+        </Form.Field>
+        <Button type='submit' onClick = {this.props.handleLogIn}>Sign In</Button>
     </Form>
     </div>
     )

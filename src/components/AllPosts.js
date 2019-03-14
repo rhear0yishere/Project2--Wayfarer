@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import SFCityContainer from '../containers/SFCityContainer'
+import CityContainer from '../containers/CityContainer'
 
 class AllPosts extends Component {
   state ={
@@ -8,7 +8,7 @@ class AllPosts extends Component {
   render() {
     return (
       <div>
-      <SFCityContainer LoggedIn= {this.state.LoggedIn} />
+          <CityContainer LoggedIn= {this.state.LoggedIn} />
       </div>
     );
   }

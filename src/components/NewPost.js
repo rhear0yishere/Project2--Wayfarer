@@ -28,13 +28,11 @@ class NewPost extends Component {
     
   }
   
-  
   state = {
     title: '',
     message: '',
     city: '',
     author: ''
-  
   };
 
   onInputChangeMesssage = (event) => {
@@ -75,47 +73,39 @@ class NewPost extends Component {
 
     return (
       <div >
-        <Modal    trigger={<Button className="tipModal">Add New Tip</Button>}>
-              <Modal.Header></Modal.Header>
-              <Modal.Content >
+        <Modal trigger = {<Button className="tipModal">Add New Tip</Button>}>
+          <Modal.Content >
               <h1>Add A Tip</h1>
-        <Form className="postForm" >
-        <input
-         className= "postCity"
-         value={ this.state.city}
-         onChange={ this.changeCity }
-         placeholder="City"
-         type="text"
+            <Form className = "postForm" >
+                  <input
+                    className = "postCity"
+                    value = { this.state.city}
+                    onChange = { this.changeCity }
+                    placeholder = "City"
+                    type = "text"
 
-        />
+                  />
+                  <input
+                    className = "postTitle"
+                    value = { this.state.title }
+                    onChange = { this.onInputChangeTitle }
+                    placeholder = "Post Title"
+                    type = "text"
 
-        {/* <select name="Cities" >
-            <option value= "None">Pick City</option>
-            <option value="Seattle">Seattle</option>
-            <option value="San Francisco">San Francisco</option>
-            <option value="London">London</option>
-        </select> */}
-        <input
-         className= "postTitle"
-         value={ this.state.title }
-         onChange={ this.onInputChangeTitle }
-         placeholder="Post Title"
-         type="text"
-
-        />
-          <textarea 
-            className= "postText"
-            value={ this.state.message }
-            onChange={ this.onInputChangeMesssage }
-            placeholder="Post message"
-            type="text"
-          />
-          <Button
-            type="submit"  
-            className="submitTip" onClick= {this.onFormSubmit} >Submit Tip </Button>
-        </Form>
-              </Modal.Content>
-              </Modal>
+                  />
+                    <textarea 
+                      className = "postText"
+                      value = { this.state.message }
+                      onChange = { this.onInputChangeMesssage }
+                      placeholder = "Post message"
+                      type = "text"
+                    />
+                    <Button
+                      type = "submit"  
+                      className = "submitTip" onClick = {this.onFormSubmit} >Submit Tip </Button>
+            </Form>
+        </Modal.Content>
+      </Modal>
        
       </div>
     );

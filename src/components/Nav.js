@@ -40,27 +40,22 @@ import '../index.css'
     if(this.props.isLoggedIn){
       return (
       
-        <div className='nav-container'>
-           <Menu className='nav'  fixed='top' >
-            <Menu.Item  as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
+        <div className = 'nav-container'>
+           <Menu className = 'nav'  fixed = 'top' >
+            <Menu.Item  as={Link} to='/' name = 'Wayfarer'  onClick={this.handleItemClick} />
             
-            <Menu.Menu position='right'>
-            <Menu.Item className= "navBackground" as={Link} to='/AllPosts'
-                name='All Tips'
-              //   active={activeItem === 'SignIn'}
+            <Menu.Menu position = 'right'>
+            <Menu.Item className = "navBackground" as = {Link} to = '/AllPosts'
+                name = 'All Tips'
                 onClick={this.handleItemClick}
               />
-              
               <Menu.Item className= "navBackground" as={Link} to='/User'
                 name='Profile'
-              //   active={activeItem === 'SignIn'}
                 onClick={this.handleItemClick}
               />
     
-        
               <Menu.Item className= "navBackground" as={Link} to='/'
                 name='Log Out'
-              //   active={activeItem === 'SignIn'}
                 onClick={this.props.loggedOut}
               />
               
@@ -72,38 +67,35 @@ import '../index.css'
     else{
       return (
       
-        <div className='nav-container'>
-           <Menu className='nav'  fixed='top' >
-            <Menu.Item className= "navBackground" as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
-            
-            <Menu.Menu position='right'>
-
-            <Menu.Item className= "navBackground" as={Link} to='/AllPosts'
-                name='All Tips'
-              //   active={activeItem === 'SignIn'}
-                onClick={this.handleItemClick}
-              />
-              <Menu.Item className= "navBackground">
-                
-              <Modal   trigger={<Button className= "navBackground">Sign In</Button>}>
-              <Modal.Header></Modal.Header>
-              <Modal.Content>
-              <LoginPage takeInput={this.props.takeInput} handleLogIn={this.props.handleLogIn} />
-              </Modal.Content>
-              </Modal>
-              </Menu.Item>
-                
-              <Menu.Item className= "navBackground" >
-              <Modal  trigger={<Button className= "navBackground">Sign Up</Button>}>
-              <Modal.Header></Modal.Header>
-              <Modal.Content>
-                <SignupPage takeInput={this.props.takeInput} signUp={this.props.signUp}/>
-              </Modal.Content>
-              </Modal>
+        <div className = 'nav-container'>
+           <Menu className = 'nav'  fixed = 'top' >
+              <Menu.Item className= "navBackground" as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
               
-              </Menu.Item>
+              <Menu.Menu position = 'right'>
+
+                <Menu.Item className = "navBackground" as = {Link} to = '/AllPosts'
+                      name = 'All Tips'
+                      onClick = {this.handleItemClick}
+                    />
+                <Menu.Item className = "navBackground">  
+                  <Modal trigger = {<Button className = "navBackground">Sign In</Button>}>
+                  <Modal.Header></Modal.Header>
+                  <Modal.Content>
+                  <LoginPage takeInput = {this.props.takeInput} handleLogIn = {this.props.handleLogIn} />
+                  </Modal.Content>
+                  </Modal>
+                </Menu.Item>
+                    
+                <Menu.Item className = "navBackground" >
+                  <Modal  trigger = {<Button className = "navBackground">Sign Up</Button>}>
+                  <Modal.Header></Modal.Header>
+                  <Modal.Content>
+                    <SignupPage takeInput = {this.props.takeInput} signUp = {this.props.signUp}/>
+                  </Modal.Content>
+                  </Modal>
+                </Menu.Item>
               </Menu.Menu>
-            
+              
           </Menu> 
         </div>
       

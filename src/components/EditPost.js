@@ -18,8 +18,6 @@ class EditPost extends Component {
         tipId: this.props.tip._id,
         text: event.target.value,
         title:event.target.value,
-        
-        
       }
     });
   }
