@@ -41,7 +41,7 @@ import '../index.css'
       return (
       
         <div className='nav-container'>
-           <Menu width={8} fixed='top' >
+           <Menu className='nav'  fixed='top' >
             <Menu.Item  as={Link} to='/' name='Wayfarer'  onClick={this.handleItemClick} />
             
             <Menu.Menu position='right'>
