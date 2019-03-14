@@ -143,7 +143,7 @@ code {
 .CITYDIV{
   display: flex;
   text-align: center;
-  margin-top:100px;
+  margin-top:150px;
 }
 
 .about h1 {
@@ -281,6 +281,7 @@ li{
 .userIcon{
   justify-content: center;
   text-align: center;
+  margin-top:100px;
 }
 
 .allTips,.specificUser{
