@@ -1,3 +1,25 @@
+https://test-deploy-wayfarer.herokuapp.com
+
+# Wayfarer 
+
+## A web app where users can share posts and tips about cities around the world.
+
+## Tech Stack
+### M.E.R.N.
+
+## Features:
+- Full C.R.U.D. 
+- User Authentication using jwt 
+
+## Future Updates: 
+- Fix update 
+- Add more styling 
+- Make app more dynamic 
+
+
+
+# Created with React 
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
