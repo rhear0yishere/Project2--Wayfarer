@@ -12,6 +12,7 @@ deletingTip = (event) => {
   render() {
     
     return (
+
       
       <li data-tips-index={ this.props.tip._id }>
       <div>
@@ -33,6 +34,11 @@ deletingTip = (event) => {
         />
         
       </li>
+
+      <div className="userPost">
+      <div className="profilePic">
+
+
     );
   }
 }
